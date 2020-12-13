@@ -233,7 +233,7 @@ async def amireallyalive(alive):
     logo = LOGO
     output = (
         f"✘ > > > > > > > > > > > > > ✘\n"
-        f"Berjalan Di __{UPSTREAM_REPO_BRANCH}__ \n"
+        f"running on __{UPSTREAM_REPO_BRANCH}__ \n"
         f"✘ > > > > > > > > > > > > > ✘\n"
         "        ✘AkenoXNewイ\n"
         f"✘ > > > > > > > > > > > > > ✘\n"
