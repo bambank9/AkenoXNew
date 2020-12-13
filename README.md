@@ -31,8 +31,6 @@
 
 <p align="center">&nbsp;</p>
 
-# Google Drive Tutorial
-[![SetGD](https://raw.githubusercontent.com/fortifying/OUBnew/sql-extended/gd.png)](https://telegra.ph/How-To-Setup-Goo
 
 
 
@@ -57,6 +55,8 @@ Also join <a href="https://t.me/userbotindo">Userbot INDO🇮🇩</a> Telegram G
 * [kandnub](https://github.com/kandnub) - TG-UserBot
 * [AdekMaulana](https://github.com/adekmaulana) - ProjectBish
 * [Mkaraniya](https://github.com/mkaraniya) - OpenUserBot
+* [X-Newbie](https://github.com/X-Newbie) - XBot-Remix
+* [ajibcdefgh](https://github.com/Ajibcdefgh) - ProjectDark
 
 <p align="center">&nbsp;</p>
 <h2 align="center">License</h2>
