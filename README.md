@@ -49,7 +49,7 @@ Also join <a href="https://t.me/userbotindo">Userbot INDO🇮🇩</a> Telegram G
 
 ## Credits
 * [lonami](https://lonami.dev) - For creating [Telethon](https://github.com/LonamiWebs/Telethon)
-* [fortifying](https://github.com/fortifying/OUBnew) - OUBnew
+* [fortifying](https://github.com/fortifying/OUBnew) - OUBnew (Original-Bot)
 * [RaphielGang](https://github.com/RaphielGang) - Telegram-Paperplane
 * [AvinashReddy3108](https://github.com/AvinashReddy3108) - PaperplaneExtended
 * [kandnub](https://github.com/kandnub) - TG-UserBot
