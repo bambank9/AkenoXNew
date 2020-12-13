@@ -60,4 +60,4 @@ Also join <a href="https://t.me/userbotindo">Userbot INDO🇮🇩</a> Telegram G
 
 <p align="center">&nbsp;</p>
 <h2 align="center">License</h2>
-<p align="center"><a href="https://github.com/fortifying/OUBnew/blob/sql-extended/LICENSE">Raphielscape Public License</a> - Version 1.d, July 2020</p>
+<p align="center"><a href="https://github.com/rizgustiadi/AkenoXNew/main/LICENSE">Raphielscape Public License</a> - Version 1.d, July 2020</p>
