@@ -96,7 +96,7 @@ async def pingme(pong):
     await pong.edit("`gass!`")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**✘ > > > > > > > > > > > >**\n➥ **Ping** : %sms\n✘ > > > > > > > > > > > >\n**Akeno Uptime** : {uptime}\n✘ > > > > > > > > > > > >\n**MyBoss** : {DEFAULTUSER}\n" % (duration))
+    await pong.edit(f"**✘ > > > > > > > > > > > >**\n➥ **Ping** : %sms\n✘ > > > > > > > > > > > >\n**Akeno Uptime** : {uptime}\n✘ > > > > > > > > > > > >\n" % (duration))
 
 CMD_HELP.update(
     {"ping": "`.ping`\
