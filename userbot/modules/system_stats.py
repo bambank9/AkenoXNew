@@ -240,11 +240,11 @@ async def amireallyalive(alive):
         f"✘ > > > > > > > > > > > > > ✘\n"
         f"  イDetail UserBot Ainkイ\n"
         f"✘ > > > > > > > > > > > ✘\n"
-        f"➥ ✘🐧 `NamaBot              :{CN} v{VER}`\n"
-        f"➥ ✘⚙️ `Telethon version     :v{version.__version__} `\n"
-        f"➥ ✘🐉 `Naga Version         :v{python_version()} `\n"
-        f"➥ ✘😈 `MYBOS                :`{DEFAULTUSER} \n"
-        f"➥ ✘🗃 `load modules         :`{len(modules)} \n\n"
+        f"➥ ✘ `NamaBot                :{CN} v{VER}`\n"
+        f"➥ ✘ `Telethon version       :v{version.__version__} `\n"
+        f"➥ ✘ `Python Version         :v{python_version()} `\n"
+        f"➥ ✘ `MYBOS                  :`{DEFAULTUSER} \n"
+        f"➥ ✘ `load modules           :`{len(modules)} \n\n"
         f"➥ ✘[🇮🇩`Github Repository🇮🇩](https://github.com/rizgustiadi/AkenoXNew)`\n"
     )
     await bot.send_file(alive.chat_id, logo, caption=output)
