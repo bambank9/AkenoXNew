@@ -1,7 +1,7 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e35faa6a680f4d66abdffddaad76e418)](http://app.codacy.com/manual/rizgustiadi/AkenoXNew/dashboard) ![Last Commit](https://img.shields.io/github/last-commit/rizgustiadi/AkenoXNew/main) ![Contributors](https://img.shields.io/github/contributors/rizgustiadi/AkenoXNew?color=LightSlateGrey)
 # Project Akeno
 
-![our](https://telegra.ph/file/fc6c777ad0a1d9ce48f5d.jpg)
+![our](https://telegra.ph/file/c5bb78ae85476e2d2abad.jpg)
 
 `
  A modular Telegram userbot running on Python 3.8+ with an sqlalchemy database.
