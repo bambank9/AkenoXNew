@@ -233,7 +233,7 @@ async def amireallyalive(alive):
     logo = LOGO
     output = (
         f"✘ > > > > > > > > > > > > > ✘\n"
-        f"running on [__{UPSTREAM_REPO_BRANCH}__] \n"
+        f"running on 🇮🇩 __{UPSTREAM_REPO_BRANCH}__ 🇮🇩\n"
         f"✘ > > > > > > > > > > > > > ✘\n"
         "        ✘AkenoXNewイ\n"
         f"✘ > > > > > > > > > > > > > ✘\n"
@@ -244,7 +244,7 @@ async def amireallyalive(alive):
         f"➥ ✘🐉 `Naga Version         :v{python_version()} `\n"
         f"➥ ✘😈 `MYBOS                :`{DEFAULTUSER} \n"
         f"➥ ✘🗃 `load modules         :`{len(modules)} \n\n"
-        f"➥ ✘🇮🇩`Github Repository🇮🇩(https://github.com/rizgustiadi/AkenoXNew)`\n"
+        f"➥ ✘[🇮🇩`Github Repository🇮🇩](https://github.com/rizgustiadi/AkenoXNew)`\n"
     )
     await bot.send_file(alive.chat_id, logo, caption=output)
     await alive.delete()
