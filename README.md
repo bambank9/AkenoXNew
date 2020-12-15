@@ -1,5 +1,5 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e35faa6a680f4d66abdffddaad76e418)](http://app.codacy.com/manual/rizgustiadi/AkenoXNew/dashboard) ![Last Commit](https://img.shields.io/github/last-commit/rizgustiadi/AkenoXNew/main) ![Contributors](https://img.shields.io/github/contributors/rizgustiadi/AkenoXNew?color=LightSlateGrey)
-# Project Akeno
+# Project AkenoXNew
 
 ![our](https://telegra.ph/file/c5bb78ae85476e2d2abad.jpg)
 
