@@ -24,12 +24,12 @@ async def help(event):
             await event.edit("Yang Bener Tulis Modulnya.")
     else:
         string1 = "Harap tentukan modul mana yang Anda ingin bantuannya !!\nUsage: .help <nama modul>\n\n"
-        string = "[ "
+        string = "< "
         string3 = "Daftar untuk semua perintah yang tersedia di bawah ini: "
         string2 = "-------------------------------------------------------------"
         for i in CMD_HELP:
             string += "`" + str(i)
-            string += "`  ][  "
+            string += "`  ><  "
         await event.edit(
             f"{string1}" f"{string3}" f"{string2}\n" f"{string}" f"{string2}"
         )
