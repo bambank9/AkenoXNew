@@ -91,7 +91,6 @@ async def pingme(pong):
 @register(outgoing=True, pattern="^.pong$")
 async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
-    user = await bot.get_me()
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
     await pong.edit("`gass!`")
