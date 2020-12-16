@@ -175,7 +175,7 @@ async def mention_afk(mention):
                         f"{str(choice(AFKSTR))}"
                         f"\n\nSaya Sedang OFF"
                         f"\nKarena : `{AFKREASON}`"
-                        f"\nTerakhir On : {afk_since}⏱"
+                        f"\nTerakhir ON : {afk_since}⏱"
                     )
                 else:
                     await mention.reply(
