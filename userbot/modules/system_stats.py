@@ -238,12 +238,12 @@ async def amireallyalive(alive):
         f"✘ > > > > > > > > > > > > > ✘\n"
         f"  イDetail UserBot Ainkイ\n"
         f"✘ > > > > > > > > > > > > > ✘\n"
-        f"➥ ✘ `NameBot                :✘AkenoXNewイ`\n"
+        f"➥ ✘ `NameBot                :AkenoXNew`\n"
         f"➥ ✘ `BotVers                :`v{VER}\n"
         f"➥ ✘ `Telethon version       :v{version.__version__} `\n"
         f"➥ ✘ `Python Version         :v{python_version()} `\n"
         f"➥ ✘ `Owner                  :`{DEFAULTUSER} \n"
-        f"➥ ✘ `Load modules           :`{len(modules)} \n\n"
+        f"➥ ✘ `Load modules           :`{len(modules)} \n"
         f"➥ ✘[🇮🇩`Github Repository🇮🇩](https://github.com/rizgustiadi/AkenoXNew)`\n"
     )
     await bot.send_file(alive.chat_id, logo, caption=output)
