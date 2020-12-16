@@ -114,8 +114,7 @@ async def type_afk_is_not_true(notafk):
 
 @register(incoming=True, disable_edited=True)
 async def mention_afk(mention):
-    """ This function takes care of notifying the people who mention you that you are AFK."""
-    logo = LOGO
+    """ This function takes care of notifying the people who mention you that you are AFK.""
     global COUNT_MSG
     global USERS
     global ISAFK
@@ -130,6 +129,7 @@ async def mention_afk(mention):
     afk_since = "a while ago"
     if mention.message.mentioned and not (await mention.get_sender()).bot:
         if ISAFK:
+            logo = LOGO
             now = datetime.now()
             datime_since_afk = now - afk_time  # pylint:disable=E0602
             time = float(datime_since_afk.seconds)
