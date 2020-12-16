@@ -161,8 +161,9 @@ async def mention_afk(mention):
                 if AFKREASON:
                     await mention.reply(
                         f"{str(choice(AFKSTR))}"
-                        f"\n\nSaya sedang off sejak {afk_since}"
-                        f"\nKarena: `{AFKREASON}`"
+                        f"\n\nSaya Sedang OFF"
+                        f"\nAlasan: `{AFKREASON}`"
+                        f"\nTerakhir ON: {afk_since}"
                     )
                 else:
                     await mention.reply(
@@ -174,8 +175,9 @@ async def mention_afk(mention):
                 if AFKREASON:
                     await mention.reply(
                         f"{str(choice(AFKSTR))}"
-                        f"\n\nSaya sedang off sejak {afk_since}"
+                        f"\n\nSaya Sedang OFF"
                         f"\nKarena: `{AFKREASON}`"
+                        f"\nTerakhir On: {afk_since}"
                     )
                 else:
                     await mention.reply(
@@ -249,8 +251,9 @@ async def afk_on_pm(sender):
                 if AFKREASON:
                     await sender.reply(
                         f"{str(choice(AFKSTR))}\n"
-                        f"\n\nSaya sedang off sejak {afk_since}"
+                        f"\n\nSaya Sedang OFF"
                         f"\nKarena: `{AFKREASON}`"
+                        f"\nTerakhir ON: {afk_since}"
                     )
                 else:
                     await sender.reply(
