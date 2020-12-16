@@ -244,7 +244,7 @@ async def amireallyalive(alive):
         f"➥ ✘ `Python Version         :v{python_version()} `\n"
         f"➥ ✘ `Owner                  :{DEFAULTUSER}` \n"
         f"➥ ✘ `Load modules           :`{len(modules)} \n"
-        f"➥ ✘[🇮🇩`Github Repository🇮🇩](https://github.com/rizgustiadi/AkenoXNew)`\n"
+        f"➥ ✘[`🇮🇩Github Repository🇮🇩](https://github.com/rizgustiadi/AkenoXNew)`\n"
     )
     await bot.send_file(alive.chat_id, logo, caption=output)
     await alive.delete()
