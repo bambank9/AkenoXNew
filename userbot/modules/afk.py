@@ -161,7 +161,7 @@ async def mention_afk(mention):
                         f"{str(choice(AFKSTR))}"
                         f"\n\nSaya Sedang OFF"
                         f"\nAlasan : `{AFKREASON}`"
-                        f"\nTerakhir ON : {afk_since}"
+                        f"\nTerakhir ON : {afk_since}⏱"
                     )
                 else:
                     await mention.reply(
@@ -175,7 +175,7 @@ async def mention_afk(mention):
                         f"{str(choice(AFKSTR))}"
                         f"\n\nSaya Sedang OFF"
                         f"\nKarena : `{AFKREASON}`"
-                        f"\nTerakhir On : {afk_since}"
+                        f"\nTerakhir On : {afk_since}⏱"
                     )
                 else:
                     await mention.reply(
@@ -251,7 +251,7 @@ async def afk_on_pm(sender):
                         f"{str(choice(AFKSTR))}\n"
                         f"\n\nSaya Sedang OFF"
                         f"\nKarena : `{AFKREASON}`"
-                        f"\nTerakhir ON : {afk_since}"
+                        f"\nTerakhir ON : {afk_since}⏱"
                     )
                 else:
                     await sender.reply(
