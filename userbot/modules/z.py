@@ -9,7 +9,7 @@ async def shalom(e):
     await e.edit(f"[`Github Profile](https://github.com/rizgustiadi)`")
     CMD_HELP.update(
         {
-            "Zal": "z.\
+            "z": "z.\
 \nUsage: gives a nice Gitub Page as output."
         }
     )
