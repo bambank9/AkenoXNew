@@ -25,9 +25,7 @@ from userbot import (
 from userbot.events import register
 
 # ========================= CONSTANTS ============================
-AFKSTR = [
-    "Rizal lagi off. Tunggu dia Ga off lagi ya......!",
-]
+AFKSTR = []
 USER_AFK = {}
 afk_time = None
 afk_start = {}
