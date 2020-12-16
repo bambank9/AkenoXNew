@@ -168,12 +168,12 @@ async def dyno_usage(dyno):
             await dyno.edit(
                 "**•Penggunaan Tirex**:\n\n"
                 f"➥ `Penggunaan Tirex untuk`  **{app.name}**:\n"
-                f"     ✘  **{AppHours} jam(s), "
-                f"{AppMinutes} menit(s)  -  {AppPercentage}%**"
+                f"     ✘  **{AppHours} jam, "
+                f"{AppMinutes} menit  -  {AppPercentage}%**"
                 "\n\n"
                 f"✘ > > > > > > > > > > > > < < < < < < < < < < < ✘\n\n"
                 "➥ `Sisa Jam Tirex Bulan Ini`:\n"
-                f"     ✘  **{hours} jam(s), {minutes} menit(s)  "
+                f"     ✘  **{hours} jam, {minutes} menit  "
                 f"-  {percentage}%**"
             )
             return True
