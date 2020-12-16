@@ -4,12 +4,12 @@ from userbot import CMD_HELP
 from userbot.events import register
 
 
-@register(outgoing=True, pattern="^.zal$")
+@register(outgoing=True, pattern="^.z$")
 async def shalom(e):
     await e.edit(f"[`Github Profile](https://github.com/rizgustiadi)`")
     CMD_HELP.update(
         {
-            "Zal": "zal.\
+            "Zal": "z.\
 \nUsage: gives a nice Gitub Page as output."
         }
     )
