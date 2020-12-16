@@ -234,7 +234,7 @@ async def amireallyalive(alive):
     logo = LOGO
     output = (
         f"✘ > > > > > > > > > > > > > ✘\n"
-        f"running on 🔥 __{UPSTREAM_REPO_BRANCH}__ 🔥\n"
+        f"running on 🔥[ __{UPSTREAM_REPO_BRANCH}__ ]🔥\n"
         f"✘ > > > > > > > > > > > > > ✘\n"
         f"  イDetail UserBot Ainkイ\n"
         f"✘ > > > > > > > > > > > > > ✘\n"
