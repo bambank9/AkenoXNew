@@ -237,14 +237,14 @@ async def amireallyalive(alive):
         f"running on 🇮🇩 __{UPSTREAM_REPO_BRANCH}__ 🇮🇩\n"
         f"✘ > > > > > > > > > > > > > ✘\n"
         f"  イDetail UserBot Ainkイ\n"
-        f"✘ > > > > > > > > > > > > > ✘\n\n"
+        f"✘ > > > > > > > > > > > > > ✘\n"
         f"➥ ✘ `NameBot                :✘AkenoXNewイ`\n"
         f"➥ ✘ `BotVers                :`v{VER}\n"
         f"➥ ✘ `Telethon version       :v{version.__version__} `\n"
         f"➥ ✘ `Python Version         :v{python_version()} `\n"
         f"➥ ✘ `Owner                  :`{DEFAULTUSER} \n"
         f"➥ ✘ `Load modules           :`{len(modules)} \n\n"
-        f"➥ ✘[🇮🇩`Github Repository🇮🇩]`(https://github.com/rizgustiadi/AkenoXNew)\n"
+        f"➥ ✘[🇮🇩`Github Repository🇮🇩](https://github.com/rizgustiadi/AkenoXNew)`\n"
     )
     await bot.send_file(alive.chat_id, logo, caption=output)
     await alive.delete()
