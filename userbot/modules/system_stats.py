@@ -22,7 +22,6 @@ from userbot import (
     CMD_HELP,
     ALIVE_NAME,
     LOGO,
-    USERS,
     UPSTREAM_REPO_BRANCH,
     AkenoXNew_VER,
     CODENAME,
@@ -228,7 +227,6 @@ async def pipcheck(pip):
 async def amireallyalive(alive):
     # Prevent Channel Bug to run alive commad
     if alive.is_channel and not alive.is_group:
-        global USERS
         user = await bot.get_me()
         user.username = user.first_name
         await alive.edit("`alive Commad isn't permitted on channels`")
@@ -245,7 +243,7 @@ async def amireallyalive(alive):
         f"➥ ✘ `BotVersion             :`v{VER}\n"
         f"➥ ✘ `Telethon version       :v{version.__version__} `\n"
         f"➥ ✘ `Python Version         :v{python_version()} `\n"
-        f"➥ ✘ `Owner                  :[{user.first_name}](tg://user?id={user.id})` \n"
+        f"➥ ✘ `Owner                  :{user.first_name}` \n"
         f"➥ ✘ `Load modules           :`{len(modules)} \n"
         f"➥ ✘[`🇮🇩Github Repository🇮🇩](https://github.com/rizgustiadi/AkenoXNew)`\n"
     )
