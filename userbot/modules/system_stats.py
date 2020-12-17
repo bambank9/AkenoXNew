@@ -239,7 +239,7 @@ async def amireallyalive(alive):
         f"  イDetail UserBot Ainkイ\n"
         f"✘ > > > > > > > > > > > > > ✘\n"
         f"➥ ✘ `NameBot                :AkenoXNew`\n"
-        f"➥ ✘ `BotVers                :`v{VER}\n"
+        f"➥ ✘ `BotVersion             :`v{VER}\n"
         f"➥ ✘ `Telethon version       :v{version.__version__} `\n"
         f"➥ ✘ `Python Version         :v{python_version()} `\n"
         f"➥ ✘ `Owner                  :{DEFAULTUSER}` \n"
