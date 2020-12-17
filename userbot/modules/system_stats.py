@@ -241,7 +241,7 @@ async def amireallyalive(alive):
         f"➥ ✘ `BotVersion             :`v{VER}\n"
         f"➥ ✘ `Telethon version       :v{version.__version__} `\n"
         f"➥ ✘ `Python Version         :v{python_version()} `\n"
-        f"➥ ✘ `Owner                  :{DEAFULTUSER}`\n"
+        f"➥ ✘ `Owner                  :{DEFAULTUSER}`\n"
         f"➥ ✘ `Load modules           :`{len(modules)} \n"
         f"➥ ✘[`🇮🇩Github Repository🇮🇩](https://github.com/rizgustiadi/AkenoXNew)`\n"
     )
