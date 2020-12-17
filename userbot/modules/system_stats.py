@@ -227,7 +227,6 @@ async def pipcheck(pip):
 async def amireallyalive(alive):
     # Prevent Channel Bug to run alive commad
     if alive.is_channel and not alive.is_group:
-        user = await bot.get_me()
         user.username = user.first_name
         await alive.edit("`alive Commad isn't permitted on channels`")
         return
