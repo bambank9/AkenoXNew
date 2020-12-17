@@ -9,7 +9,7 @@ async def shalom(e):
     global USERS
     user = await bot.get_me()
     user.username = user.first_name
-    await e.edit(f"[{user.first_name}](tg://user?id={user.id}) Hast Left The Chat")
+    await e.edit(f"[{user.first_name}](tg://user?id={user.id}) Has Left The Chat")
     CMD_HELP.update(
         {
             "Bye": ".bye\
