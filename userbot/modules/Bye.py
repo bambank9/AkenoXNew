@@ -1,6 +1,6 @@
 """ Userbot module for other small commands. """
 import sys
-from userbot import CMD_HELP,USERS
+from userbot import CMD_HELP,USERS,bot
 from userbot.events import register
 
 
