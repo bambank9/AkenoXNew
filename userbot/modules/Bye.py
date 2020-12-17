@@ -7,7 +7,7 @@ from userbot.events import register
 @register(outgoing=True, pattern="^.bye$")
 async def shalom(e):
     global USERS
-    user await bot.get_me()
+    user = await bot.get_me()
     user.username = user.first_name
     await e.edit(f"[{user.first_name}](tg://user?id={user.id}) Hast Left The Chat")
     CMD_HELP.update(
