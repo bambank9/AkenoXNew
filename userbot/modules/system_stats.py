@@ -225,8 +225,6 @@ async def pipcheck(pip):
 
 @register(outgoing=True, pattern=r"^\.(?:live|on)\s?(.)?")
 async def amireallyalive(alive):
-    user = await bot.get_me()
-    user.name = user.first_name
     # Prevent Channel Bug to run alive commad
     if alive.is_channel and not alive.is_group:
         await alive.edit("`alive Commad isn't permitted on channels`")
@@ -243,7 +241,7 @@ async def amireallyalive(alive):
         f"➥ ✘ `BotVersion             :`v{VER}\n"
         f"➥ ✘ `Telethon version       :v{version.__version__} `\n"
         f"➥ ✘ `Python Version         :v{python_version()} `\n"
-        f"➥ ✘ `Owner                  :`{user.name}\n"
+        f"➥ ✘ `Owner                  :{DEAFULTUSER}`\n"
         f"➥ ✘ `Load modules           :`{len(modules)} \n"
         f"➥ ✘[`🇮🇩Github Repository🇮🇩](https://github.com/rizgustiadi/AkenoXNew)`\n"
     )
