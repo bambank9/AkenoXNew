@@ -1,7 +1,6 @@
 import emoji
 from googletrans import Translator
-
-from telebot import CMD_HELP, CMD_HNDLR
+from userbot import CMD_HELP, CMD_HNDLR
 
 
 @register(outgoing=True, pattern="^.tr(?: |$)(.*)")
