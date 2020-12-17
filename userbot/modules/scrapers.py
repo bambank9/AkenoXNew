@@ -345,43 +345,32 @@ async def text_to_speech(query):
 
 
 @register(outgoing=True, pattern="^.tr(?: |$)(.*)")
-async def _(event):
-    if event.fwd_from:
-        return
-    if "trim" in event.raw_text:
-        # https://t.me/c/1220993104/192075
-        return
-    x = await event.edit("Translating...")
-    input_str = event.pattern_match.group(1)
-    if event.reply_to_msg_id:
-        previous_message = await event.get_reply_message()
-        text = previous_message.message
-        lan = input_str or "ml"
-    elif "|" in input_str:
-        lan, text = input_str.split("|")
-    else:
-        await event.edit(
-            f"`{CMD_HNDLR}tr LanguageCode` as reply to a message.\nLanguage codes can be found [here](https://t.me/TeleBotHelpChat/22678)",
-        )
-        return
-    text = emoji.demojize(text.strip())
-    lan = lan.strip()
+async def translateme(trans):
     translator = Translator()
+    textx = await trans.get_reply_message()
+    message = trans.pattern_match.group(1)
+    if message:
+        pass
+    elif textx:
+        message = textx.text
+    else:
+        return await trans.edit("`Give a text or reply to a message to translate!`")
+
     try:
-        translated = translator.translate(text, dest=lan)
-        after_tr_text = translated.text
-        output_str = """
-**Tʀᴀɴsʟᴀᴛɪᴏɴ**
+        reply_text = translator.translate(deEmojify(message), dest=TRT_LANG)
+    except ValueError:
+        return await trans.edit("Invalid destination language.")
 
-**{} ➟ {}**
+    source_lan = LANGUAGES[f"{reply_text.src.lower()}"]
+    transl_lan = LANGUAGES[f"{reply_text.dest.lower()}"]
+    reply_text = f"From **{source_lan.title()}**\nTo **{transl_lan.title()}:**\n\n{reply_text.text}"
 
-`{}`""".format(
-            translated.src, lan, after_tr_text
+    await trans.edit(reply_text)
+    if BOTLOG:
+        await trans.client.send_message(
+            BOTLOG_CHATID,
+            f"Translated some {source_lan.title()} stuff to {transl_lan.title()} just now.",
         )
-        await event.edit(output_str)
-    except Exception as exc:
-        await event.edit(f"Error\n `{str(exc)}`")
-
 
 
 @register(pattern=".lang (tr|tts) (.*)", outgoing=True)
