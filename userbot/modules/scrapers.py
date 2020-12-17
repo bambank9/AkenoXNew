@@ -1,6 +1,5 @@
 # Copyright (C) 2019 The Raphielscape Company LLC.
 #
-#
 # Licensed under the Raphielscape Public License, Version 1.c (the "License");
 # you may not use this file except in compliance with the License.
 #
@@ -360,7 +359,7 @@ async def _(event):
     elif ";" in input_str:
         lan, text = input_str.split(";")
     else:
-        await edit_delete(event, "`.tr LanguageCode` as reply to a message", time=5)
+        await event.edit("`.tr LanguageCode` as reply to a message", time=5)
         return
     text = deEmojify(text.strip())
     lan = lan.strip()
@@ -370,9 +369,9 @@ async def _(event):
         after_tr_text = translated.text
         output_str = f"**TRANSLATED from {LANGUAGES[translated.src].title()} to {LANGUAGES[lan].title()}**\
                 \n`{after_tr_text}`"
-        await edit_or_reply(event, output_str)
+        await event.edit(output_str)
     except Exception as exc:
-        await edit_delete(event, str(exc), time=5)
+        await event.edit(str(exc), time=5)
 
 
 
