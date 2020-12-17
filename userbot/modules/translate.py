@@ -1,3 +1,4 @@
+import google_trans_new
 from google_trans_new import LANGUAGES, google_translator
 
 
