@@ -343,36 +343,6 @@ async def text_to_speech(query):
                 BOTLOG_CHATID, "Text to Speech executed successfully !")
         await query.delete()
 
-
-@register(outgoing=True, pattern="^.tr(?: |$)(.*)")
-async def translateme(trans):
-    translator = Translator()
-    textx = await trans.get_reply_message()
-    message = trans.pattern_match.group(1)
-    if message:
-        pass
-    elif textx:
-        message = textx.text
-    else:
-        return await trans.edit("`Give a text or reply to a message to translate!`")
-
-    try:
-        reply_text = translator.translate(deEmojify(message), dest=TRT_LANG)
-    except ValueError:
-        return await trans.edit("Invalid destination language.")
-
-    source_lan = LANGUAGES[f"{reply_text.src.lower()}"]
-    transl_lan = LANGUAGES[f"{reply_text.dest.lower()}"]
-    reply_text = f"From **{source_lan.title()}**\nTo **{transl_lan.title()}:**\n\n{reply_text.text}"
-
-    await trans.edit(reply_text)
-    if BOTLOG:
-        await trans.client.send_message(
-            BOTLOG_CHATID,
-            f"Translated some {source_lan.title()} stuff to {transl_lan.title()} just now.",
-        )
-
-
 @register(pattern=".lang (tr|tts) (.*)", outgoing=True)
 async def lang(value):
     """ For .lang command, change the default langauge of userbot scrapers. """
@@ -1333,8 +1303,6 @@ CMD_HELP.update(
 \nUsage: Usage: Does a search on Urban Dictionary.",
         "tts": "`.tts` <text> [or reply]\
 \nUsage:Translates text to speech for the language which is set.\nUse .lang tts <language code> to set language for tts. (Default is English.)",
-        "translate": "`.tr` <text> [or reply]\
-\nUsage: Translates text to the language which is set.\nUse .lang tr <language code> to set language for tr. (Default is English)",
         "youtube": "`.yt` <count> <query>\
 \nUsage: Does a YouTube search.\
 \n\nCan specify the number of results needed (default is 5).",
