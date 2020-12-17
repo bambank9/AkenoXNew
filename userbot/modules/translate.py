@@ -1,3 +1,4 @@
+import emoji
 from googletrans import Translator
 from googletrans import LANGUAGES, Translator
 from userbot import CMD_HELP,BOTLOG,BOTLOG_CHATID
