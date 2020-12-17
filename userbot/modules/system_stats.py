@@ -7,6 +7,7 @@
 
 import platform
 import sys
+import time
 from asyncio import create_subprocess_exec as asyncrunapp
 from asyncio.subprocess import PIPE as asyncPIPE
 from datetime import datetime
@@ -225,6 +226,7 @@ async def pipcheck(pip):
 
 @register(outgoing=True, pattern=r"^\.(?:live|on)\s?(.)?")
 async def amireallyalive(alive):
+    uptime = await get_readable_time((time.time() - StartTime))
     # Prevent Channel Bug to run alive commad
     if alive.is_channel and not alive.is_group:
         await alive.edit("`alive Commad isn't permitted on channels`")
@@ -243,6 +245,7 @@ async def amireallyalive(alive):
         f"➥ ✘ `Python Version         :v{python_version()} `\n"
         f"➥ ✘ `Owner                  :{DEFAULTUSER}`\n"
         f"➥ ✘ `Load modules           :`{len(modules)} \n"
+        f"➥ ✘ `BotUpTime              :`{uptime}\n"
         f"➥ ✘[`🇮🇩Github Repository🇮🇩](https://github.com/rizgustiadi/AkenoXNew)`\n"
     )
     await bot.send_file(alive.chat_id, logo, caption=output)
