@@ -356,22 +356,28 @@ async def _(event):
         previous_message = await event.get_reply_message()
         text = previous_message.message
         lan = input_str or "en"
-    elif ";" in input_str:
-        lan, text = input_str.split(";")
+    elif "|" in input_str:
+        lan, text = input_str.split("|")
     else:
-        await event.edit("`.tr LanguageCode` as reply to a message", time=5)
+        await event.edit("`.tr LanguageCode` as reply to a message")
         return
-    text = deEmojify(text.strip())
+    text = emoji.demojize(text.strip())
     lan = lan.strip()
-    Translator()
+    translator = Translator()
     try:
-        translated = await getTranslate(text, dest=lan)
+        translated = translator.translate(text, dest=lan)
         after_tr_text = translated.text
-        output_str = f"**TRANSLATED from {LANGUAGES[translated.src].title()} to {LANGUAGES[lan].title()}**\
-                \n`{after_tr_text}`"
+        # TODO: emojify the :
+        # either here, or before translation
+        output_str = """**TRANSLATED** from {} to {}
+{}""".format(
+            translated.src,
+            lan,
+            after_tr_text
+        )
         await event.edit(output_str)
     except Exception as exc:
-        await event.edit(str(exc), time=5)
+        await event.edit(str(exc))
 
 
 
