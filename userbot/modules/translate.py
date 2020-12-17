@@ -1,6 +1,6 @@
 import emoji
 from googletrans import Translator
-from userbot import CMD_HELP, CMD_HNDLR
+from userbot import CMD_HELP
 from userbot.events import register
 
 
@@ -9,19 +9,17 @@ async def _(event):
     if event.fwd_from:
         return
     if "trim" in event.raw_text:
+        # https://t.me/c/1220993104/192075
         return
-    x = await edit.event("Translating...")
     input_str = event.pattern_match.group(1)
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
         text = previous_message.message
-        lan = input_str or "ml"
+        lan = input_str or "en"
     elif "|" in input_str:
         lan, text = input_str.split("|")
     else:
-        await x.edit(
-            f"`{CMD_HNDLR}tr LanguageCode` as reply to a message.\nLanguage codes can be found [here](https://t.me/TeleBotHelpChat/22678)",
-        )
+        await event.edit("`.tr LanguageCode` as reply to a message")
         return
     text = emoji.demojize(text.strip())
     lan = lan.strip()
@@ -29,18 +27,17 @@ async def _(event):
     try:
         translated = translator.translate(text, dest=lan)
         after_tr_text = translated.text
-        output_str = """
-**Tʀᴀɴsʟᴀᴛɪᴏɴ**
-
-**{} ➟ {}**
-
-`{}`""".format(
-            translated.src, lan, after_tr_text
+        # TODO: emojify the :
+        # either here, or before translation
+        output_str = """**TRANSLATED** from {} to {}
+{}""".format(
+            translated.src,
+            lan,
+            after_tr_text
         )
-        await x.edit(output_str)
+        await event.edit(output_str)
     except Exception as exc:
-        await x.edit(f"Error\n `{str(exc)}`")
-
+        await event.edit(str(exc))
 
 
 CMD_HELP.update(
