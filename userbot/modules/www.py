@@ -9,7 +9,7 @@
 from datetime import datetime
 
 from speedtest import Speedtest
-from userbot import CMD_HELP, StartTime
+from userbot import CMD_HELP, StartTime, bot, USERS
 from userbot.events import register
 import time
 async def get_readable_time(seconds: int) -> str:
@@ -81,22 +81,28 @@ def speed_convert(size):
 @register(outgoing=True, pattern="^.ping$")
 async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
+    global USERS
+    user = await bot.get_me()
+    user.name = user.first_name
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    await pong.edit("`Pinging....`")
+    await pong.edit("`Poooong........`")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**✘ > > > > > > > > > > > >**\n➥ **Pong** : %sms\n**✘ > > > > > > > > > > > >**\n➥ **Akeno Uptime** : {uptime}\n✘ > > > > > > > > > > > >\n" % (duration))
+    await pong.edit(f"➥ **Pong** : %sms\n**<×>=-=-=-=-=-=-=-=-=-=-=-=<×>**\n➥ **Akeno Uptime** : {uptime}\n<×>=-=-=-=-=-=-=-=-=-=-=-=<×>\n➥ **OWNER** : [{user.first_name}](tg://user?id={user.id})\n" % (duration))
 
 @register(outgoing=True, pattern="^.pong$")
 async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
+    global USERS
+    user = await bot.get_me()
+    user.username = user.first_name
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
     await pong.edit("`gass!`")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**✘ > > > > > > > > > > > >**\n➥ **Ping** : %sms\n✘ > > > > > > > > > > > >\n➥ **Akeno Uptime** : {uptime}\n✘ > > > > > > > > > > > >\n" % (duration))
+    await pong.edit(f"➥ **Ping** : %sms\n<×>=-=-=-=-=-=-=-=-=-=-=-=<×>\n➥ **Akeno Uptime** : {uptime}\n<×>=-=-=-=-=-=-=-=-=-=-=-=<×>\n➥ **OWNER** : [{user.first_name}](tg://user?id={user.id})\n" % (duration))
 
 CMD_HELP.update(
     {"ping": "`.ping`\
