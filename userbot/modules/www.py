@@ -89,7 +89,7 @@ async def pingme(pong):
     await pong.edit("`Poooong........`")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**<×>=-=-=-=-=-=-=-=-=-=-=-=<×>\n➥ **Pong** : %sms\n**<×>=-=-=-=-=-=-=-=-=-=-=-=<×>**\n➥ **Akeno Uptime** : {uptime}\n<×>=-=-=-=-=-=-=-=-=-=-=-=<×>\n➥ **OWNER** : [{user.first_name}](tg://user?id={user.id})\n<×>=-=-=-=-=-=-=-=-=-=-=-=<×>\n" % (duration))
+    await pong.edit(f"**<×>=-=-=-=-=-=-=-=-=-=-=-=<×>\n➥ **Pong** : %sms\n**<×>=-=-=-=-=-=-=-=-=-=-=-=<×>**\n➥ **Akeno Uptime** : {uptime}\n<×>=-=-=-=-=-=-=-=-=-=-=-=<×>\n➥ **OWNER** : [{user.first_name}](tg://user?id={user.id})\n**<×>=-=-=-=-=-=-=-=-=-=-=-=<×>\n" % (duration))
 
 @register(outgoing=True, pattern="^.pong$")
 async def pingme(pong):
@@ -102,7 +102,7 @@ async def pingme(pong):
     await pong.edit("`gass!`")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**<×>=-=-=-=-=-=-=-=-=-=-=-=<×>\n➥ **Ping** : %sms\n<×>=-=-=-=-=-=-=-=-=-=-=-=<×>\n➥ **Akeno Uptime** : {uptime}\n<×>=-=-=-=-=-=-=-=-=-=-=-=<×>\n➥ **OWNER** : [{user.first_name}](tg://user?id={user.id})\n<×>=-=-=-=-=-=-=-=-=-=-=-=<×>\n" % (duration))
+    await pong.edit(f"**<×>=-=-=-=-=-=-=-=-=-=-=-=<×>\n➥ **Ping** : %sms\n<×>=-=-=-=-=-=-=-=-=-=-=-=<×>\n➥ **Akeno Uptime** : {uptime}\n<×>=-=-=-=-=-=-=-=-=-=-=-=<×>\n➥ **OWNER** : [{user.first_name}](tg://user?id={user.id})\n**<×>=-=-=-=-=-=-=-=-=-=-=-=<×>\n" % (duration))
 
 CMD_HELP.update(
     {"ping": "`.ping`\
