@@ -174,7 +174,7 @@ async def mention_afk(mention):
                     await mention.reply(
                         f"{str(choice(AFKSTR))}"
                         f"\n\nSaya Sedang OFF"
-                        f"\nKarena : `{AFKREASON}`"
+                        f"\nAlasan : `{AFKREASON}`"
                         f"\nTerakhir ON : {afk_since}⏱"
                     )
                 else:
@@ -250,7 +250,7 @@ async def afk_on_pm(sender):
                     await sender.reply(
                         f"{str(choice(AFKSTR))}\n"
                         f"\n\nSaya Sedang OFF"
-                        f"\nKarena : `{AFKREASON}`"
+                        f"\nAlasan : `{AFKREASON}`"
                         f"\nTerakhir ON : {afk_since}⏱"
                     )
                 else:
@@ -265,7 +265,7 @@ async def afk_on_pm(sender):
                         await sender.reply(
                             f"**Saya bilang, bang rizal lagi off** {afk_since}.\
                         \n**Tinggalkan pesan dibawah ini**\
-                            \nAFK Karena: `{AFKREASON}`"
+                            \nAFK Alasan: `{AFKREASON}`"
                         )
                     else:
                         await sender.reply(
