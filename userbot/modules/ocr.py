@@ -29,7 +29,7 @@ async def ocr_space_file(
     return r.json()
 
 
-@register(pattern=r"^\.ocr (.*)", outgoing=True)
+@register(pattern=r"^\.oc (.*)", outgoing=True)
 async def ocr(event):
     if not OCR_SPACE_API_KEY:
         return await event.edit(
@@ -56,7 +56,7 @@ async def ocr(event):
 
 CMD_HELP.update(
     {
-        "ocr": ">`.ocr <bahasa>`"
+        "ocr": ">`.oc <bahasa>`"
         "\nUsage: Balas gambar atau stiker untuk mengekstrak teks darinya."
         "\n\nDapatkan kode bahasa dari [sini](https://ocr.space/OCRAPI#PostParameters)"
     }
