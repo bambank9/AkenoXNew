@@ -24,7 +24,6 @@ import qrcode
 import barcode
 from barcode.writer import ImageWriter
 import emoji
-from googletrans import Translator
 from time import sleep
 from re import findall
 from selenium import webdriver
