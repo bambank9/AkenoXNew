@@ -33,7 +33,6 @@ from wikipedia import summary
 from wikipedia.exceptions import DisambiguationError, PageError
 from requests import get, post, exceptions
 from search_engine_parser import YahooSearch as GoogleSearch
-from googletrans import LANGUAGES, Translator
 from gtts import gTTS
 from gtts.lang import tts_langs
 from emoji import get_emoji_regexp
