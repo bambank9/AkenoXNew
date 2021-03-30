@@ -68,7 +68,7 @@ async def _(event):
         await bot.forward_messages(event.chat_id, respond.message)
         await bot.send_read_acknowledge(event.chat_id)
 
-@register(outgoing=True, pattern="^.nts (?: |$)(.*)")
+@register(outgoing=True, pattern="^.netease(?: |$)(.*)")
 async def WooMai(netase):
     if netase.fwd_from:
         return
@@ -104,7 +104,7 @@ CMD_HELP.update(
     {
         "song": ">`.song` **atrist title**"
         "\nUsage: Finding and uploading song.\n"
-        ">`.nts` **<Song Title>**"
+        ">`.netease` **<Song Title>**"
         "\nUsage: **Download music with @WooMaiBot**\n"
         ">`.smd` **<song tittle>**"
         "\nUsage: **Download music from spotify**"
