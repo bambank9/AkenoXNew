@@ -69,7 +69,7 @@ async def _(event):
         await bot.send_read_acknowledge(event.chat_id)
 
 @register(outgoing=True, pattern="^.nts (?: |$)(.*)")
-async def_(event):
+async def _(event):
     if event.fwd_from:
         return
     song = netase.pattren_match.group(1)
