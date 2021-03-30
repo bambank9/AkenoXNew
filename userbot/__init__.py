@@ -108,7 +108,7 @@ CMD_LIST = os.environ.get("CMD_LIST", r"\.")
 ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
 
 # Logo
-LOGO = os.environ.get("LOGO", "https://telegra.ph/file/ea2084ba38d19c09684cc.mp4")
+LOGO = os.environ.get("LOGO", "https://telegra.ph/file/be4fc12072ff7fdfec516.mp4")
 
 # Google Drive Module
 G_DRIVE_CLIENT_ID = os.environ.get("G_DRIVE_CLIENT_ID", None)
