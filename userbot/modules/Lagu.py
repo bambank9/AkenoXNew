@@ -9,6 +9,11 @@ from userbot import bot, CMD_HELP
 import glob
 import os
 
+try:
+    pass
+except BaseException:
+    os.system("pip install instantmusic")
+
 os.system("rm -rf *.mp3")
 
 
@@ -50,7 +55,7 @@ async def WooMai(netase):
 
 CMD_HELP.update(
     {
-        "Lagu": ">`.netease` <song>"
-        "\nUsage: **Download music with @WooMaiBot**"
+        "Lagu": ">`.netease` <Artist - Song Title>\
+             \nUsage:Download music with @WooMaiBot"
     }
 )
