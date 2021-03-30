@@ -55,7 +55,7 @@ async def WooMai(netase):
 
 CMD_HELP.update(
     {
-        "Lagu": ".netease` <Artist - Song Title>\
-             \nUsage:Download music with @WooMaiBot"
+        "Lagu": ".netease <Artist - Song Title>\
+             \nUsage:Download music with @WooMaiBot."
     }
 )
