@@ -104,7 +104,7 @@ CMD_HELP.update(
     {
         "song": ">`.song` **atrist title**"
         "\nUsage: Finding and uploading song.\n"
-        ">`.nts` <Artist - Song Title>"
+        ">`.nts` **<Artist - Song Title>**"
         "\nUsage: **Download music with @WooMaiBot**\n"
         ">`.smd` **<song tittle>**"
         "\nUsage: **Download music from spotify**"
