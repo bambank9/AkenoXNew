@@ -74,7 +74,6 @@ CMD_HELP.update(
         "song": ">`.song` **atrist title**"
         "\nUsage: Finding and uploading song.\n"
         ">`.netease` **<Song Title>**"
-        "\nUsage: **Download music with @WooMaiBot**\n"
         ">`.smd` **<song tittle>**"
         "\nUsage: **Download music from spotify**"
     }
