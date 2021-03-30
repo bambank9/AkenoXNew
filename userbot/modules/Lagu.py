@@ -21,7 +21,7 @@ def bruh(name):
     os.system("instantmusic -q -s " + name)
 
 
-@register(outgoing=True, pattern=r"^.netease(?: |$)(.*)")
+@register(outgoing=True, pattern="^.netease(?: |$)(.*)")
 async def WooMai(netase):
     if netase.fwd_from:
         return
@@ -55,7 +55,7 @@ async def WooMai(netase):
 
 CMD_HELP.update(
     {
-        "Lagu": ">`.netease` <Artist - Song Title>\
+        "Lagu": ".netease` <Artist - Song Title>\
              \nUsage:Download music with @WooMaiBot"
     }
 )
