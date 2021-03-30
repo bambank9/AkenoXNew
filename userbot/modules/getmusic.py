@@ -69,16 +69,16 @@ async def _(event):
         await bot.send_read_acknowledge(event.chat_id)
 
 @register(outgoing=True, pattern="^.nts (?: |$)(.*)")
-async def _(event):
-    if event.fwd_from:
+async def WooMai(netase):
+    if netase.fwd_from:
         return
-    song = event.pattren_match.group(1)
+    song = netase.pattren_match.group(1)
     chat = "@WooMaiBot"
     link = f"/netease {song}"
-    await event.edit("```Getting Your Music```")    
+    await netase.edit("```Getting Your Music```")    
     async with bot.conversation(chat) as conv:
         await asyncio.sleep(2)
-        await event.edit("`Downloading.... Please Wait`")
+        await netase.edit("`Downloading.... Please Wait`")
         try:
             msg = await conv.send_message(link)
             response = await conv.get_response()
@@ -88,10 +88,10 @@ async def _(event):
         except YouBlockedUserError:
             await netase.reply("```Please unblock @WooMaiBot and try again```")
             return
-        await event.edit("`Sending Your Music`")
+        await netase.edit("`Sending Your Music`")
         await asyncio.sleep(3)
         await bot.send_file(netase.chat_id, respond)
-    msg = await event.client.delete_messages(
+    msg = await netase.client.delete_messages(
         conv.chat_id [msg.id, response.id, respond.id]
     )
     await msg.edit(
