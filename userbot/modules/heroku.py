@@ -170,7 +170,7 @@ async def dyno_usage(dyno):
                 f"    ➥ **{AppHours} jam, "
                 f"{AppMinutes} menit  -  {AppPercentage}%**"
                 "\n\n"
-                "✘ `Sisa Jam Tirex Bulan Ini`:\n"
+                "✘`Sisa Megalondok Bulan Ini`:\n"
                 f"    ➥ **{hours} jam, {minutes} menit  "
                 f"-  {percentage}%**"
             )
