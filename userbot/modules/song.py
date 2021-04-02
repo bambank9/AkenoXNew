@@ -34,7 +34,6 @@ from youtube_dl.utils import (
     XAttrMetadataError,
 )
 from youtubesearchpython import SearchVideos
-
 from userbot import CMD_HELP
 from userbot.events import register
 
