@@ -166,11 +166,11 @@ async def dyno_usage(dyno):
             AppMinutes = math.floor(AppQuotaUsed % 60)
 
             await dyno.edit(
-                f"✘`Penggunaan Megalondok`  **{app.name}**:\n"
+                f"✘`Penggunaan Tirex`  **{app.name}**:\n"
                 f"    ➥ **{AppHours} jam, "
                 f"{AppMinutes} menit  -  {AppPercentage}%**"
                 "\n\n"
-                "✘`Sisa Megalondok Bulan Ini`:\n"
+                "✘`Sisa Tirex Bulan Ini`:\n"
                 f"    ➥ **{hours} jam, {minutes} menit  "
                 f"-  {percentage}%**"
             )
