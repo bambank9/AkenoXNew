@@ -269,7 +269,7 @@ async def amireallyalive(alive):
         f"running on 🔥 __{UPSTREAM_REPO_BRANCH}__ 🔥\n"
         f"✘ > > > > > > > > > > > > > ✘\n"
         f"  イDetail My UserBotイ\n"
-        f"➥ ✘ `NameBot                :AkenoXNew`\n"
+        f"➥ ✘ `NameBot                :AkenoXOubNew`\n"
         f"➥ ✘ `BotVersion             :`v{VER}\n"
         f"➥ ✘ `Telethon version       :v{version.__version__} `\n"
         f"➥ ✘ `Python Version         :v{python_version()} `\n"
