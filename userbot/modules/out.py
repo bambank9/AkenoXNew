@@ -18,7 +18,7 @@ from userbot.events import register
 
 @register(outgoing=True, pattern="^out$")
 async def leave(e):
-    x = bot.me
+    x = bot.get_me()
     name = x.first_name
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
 
