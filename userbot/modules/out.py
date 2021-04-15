@@ -16,7 +16,7 @@ from telethon.tl.functions.channels import LeaveChannelRequest
 from userbot import CMD_HELP,bot
 from userbot.events import register
 
-@register(outgoing=True, pattern="out")
+@register(outgoing=True, pattern="^out$")
 async def leave(e):
     x = bot.me
     name = x.first_name
