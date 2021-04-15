@@ -17,12 +17,12 @@ from userbot import CMD_HELP,bot
 from userbot.events import register
 
 @register(outgoing=True, pattern="^out$")
-async def leave(e):
+async def shalom(e):
     x = await bot.get_me()
     name = x.first_name
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
 
-        await e.edit(f"`{name} has left this group, bye!!.`")
+        await e.edit(f"[{x.first_name}](tg://user?id={user.id}) has left this group, bye!!")
 
         time.sleep(3)
 
