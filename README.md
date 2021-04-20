@@ -55,7 +55,6 @@ Also join <a href="https://t.me/userbotindo">Userbot INDO🇮🇩</a> Telegram G
 * [kandnub](https://github.com/kandnub) - TG-UserBot
 * [AdekMaulana](https://github.com/adekmaulana) - ProjectBish
 * [Mkaraniya](https://github.com/mkaraniya) - OpenUserBot
-* [X-Newbie](https://github.com/X-Newbie) - XBot-Remix
 * [ajibcdefgh](https://github.com/Ajibcdefgh) - ProjectDark
 * Bacot
 <p align="center">&nbsp;</p>
