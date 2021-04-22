@@ -26,4 +26,3 @@ async def shalom(e):
 \nUsage: gives a nice Gitub Page as output."
         }
     )
-7
