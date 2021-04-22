@@ -18,7 +18,7 @@ async def shalom(e):
         f" ┈┈┈╱╲┊┃▋┃▋┃┈┈┈┈\n"
         f" ┈┈╭┻┊┊╰━┻━╮┈┈┈┈\n"
         f" ┈┈╰┳┊╭━━━┳╯┈┈┈┈\n"
-        f" ┈┈┈┃┊┃╰━━┫┈Owner [{user.first_name}](tg://user?id={user.id})\n" 
+        f" ┈┈┈┃┊┃╰━━┫┈Owner [{x.first_name}](tg://user?id={user.id})\n" 
         f" ┈┈┈┈┈┈┏━┓┈┈┈┈┈┈")
     CMD_HELP.update(
         {
@@ -26,3 +26,4 @@ async def shalom(e):
 \nUsage: gives a nice Gitub Page as output."
         }
     )
+7
