@@ -1,5 +1,4 @@
 <p align="center">
-    <a href="https://github.com/rizgustiadi/AkenoXNew/actions?query=workflow%3AFailCheck" > <img src="https://img.shields.io/github/workflow/status/rizgustiadi/AkenoXNew/FailCheck/main?style=for-the-badge&logo=github-actions&logoColor=white" alt="Failcheck" /></a>
     <a href="https://www.codacy.com/manual/rizgustiadi/AkenoXNew?utm_source=github.com&utm_medium=referral&utm_content=rizgustiadi/AkenoXNew&utm_campaign=Badge_Grade"><img src="https://img.shields.io/codacy/grade/c460544d68334a51b84c83ce8d3a1e98?style=for-the-badge&logo=codacy" alt="codacy badge" /></a>
     <a href="https://github.com/rizgustiadi/AkenoXNew/commits/sql-extended"><img src="https://img.shields.io/github/last-commit/rizgustiadi/AkenoXNew/sql-extended?style=for-the-badge&logo=github" alt="commit" /></a></br>
     <a href="https://github.com/rizgustiadi/AkenoXNew"><img src="https://img.shields.io/github/repo-size/rizgustiadi/AkenoXNew?style=for-the-badge&logo=github" alt="size" /></a>
