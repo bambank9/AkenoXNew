@@ -276,7 +276,7 @@ async def amireallyalive(alive):
         f"➥ ✘ `Owner                  :{DEFAULTUSER}`\n"
         f"➥ ✘ `Load modules           :`{len(modules)} \n"
         f"➥ ✘ `BotUpTime              :`{uptime}\n"
-        f"➥ ✘ [Repo] `(https://github.com/rizgustiadi/AkenoXNew)`"
+        f"➥ ✘ `[Repo](https://github.com/rizgustiadi/AkenoXNew)`"
     )
     await bot.send_file(alive.chat_id, logo, caption=output)
     await alive.delete()
