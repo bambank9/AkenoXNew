@@ -28,7 +28,7 @@
     },
     "CUSTOM_PMPERMIT": {
      "description": "The message that appears when someone PM's you. Leave it as such for default message.",
-     "value": "Do not spam here, else you will be blocked automatically."
+     "value": "Isi Pesan Apa Aja Buat Yang Suka Spam."
     },  
     "HEROKU_MEMEZ": {
       "description": "This should be True if the userbot is running on a Heroku Dyno.",
@@ -168,11 +168,6 @@
     "ALIVE_NAME": {
       "description": "Name to show in .alive message, Fill this with your name or else.",
       "required": true
-    },
-    "PMPERMIT_PIC": {
-      "description": "telegra.ph link to theimage you want as pmpermit pic, leave blank for default one!",
-      "value": "",
-      "required": false
     },
     "G_DRIVE_DATA": {
       "description": "Your client_secret.json.",
