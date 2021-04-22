@@ -268,7 +268,7 @@ async def amireallyalive(alive):
         f"✘ > > > > > > > > > > > > > ✘\n"
         f"running on 🔥 __{UPSTREAM_REPO_BRANCH}__ 🔥\n"
         f"✘ > > > > > > > > > > > > > ✘\n"
-        f"  イClone From [Oubnew](https://github.com/fortifying/OUBnew)イ\n"
+        f"  イ Original Bot [Oubnew](https://github.com/fortifying/OUBnew) イ\n"
         f"➥ ✘ `NameBot                :Akeno`\n"
         f"➥ ✘ `BotVersion             :`v{VER}\n"
         f"➥ ✘ `Telethon version       :v{version.__version__} `\n"
