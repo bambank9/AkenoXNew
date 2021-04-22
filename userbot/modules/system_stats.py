@@ -265,7 +265,7 @@ async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
     logo = LOGO
     output =(
-        f"          イ Original Bot [Oubnew](https://github.com/fortifying/OUBnew) イ\n"
+        f" イ Original Bot [Oubnew](https://github.com/fortifying/OUBnew) イ\n"
         f"➥  `NameBot                :Akeno`\n"
         f"➥  `BotVersion             :`v{VER}\n"
         f"➥  `Telethon version       :v{version.__version__} `\n"
@@ -274,7 +274,7 @@ async def amireallyalive(alive):
         f"➥  `Load modules           :`{len(modules)} \n"
         f"➥  `BotUpTime              :`{uptime}\n"
         f"➥  Repo                                            :[Akeno](https://github.com/rizgustiadi/AkenoXNew)\n"
-        f" Running On 🔥 __{UPSTREAM_REPO_BRANCH}__ 🔥\n"
+        f"        Running On 🔥 __{UPSTREAM_REPO_BRANCH}__ 🔥\n"
     )
     await bot.send_file(alive.chat_id, logo, caption=output)
     await alive.delete()
