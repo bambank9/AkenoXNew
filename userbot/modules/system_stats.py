@@ -265,9 +265,7 @@ async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
     logo = LOGO
     output = (
-        f"✘ > > > > > > > > > > > > > ✘\n"
-        f"running on 🔥 __{UPSTREAM_REPO_BRANCH}__ 🔥\n"
-        f"✘ > > > > > > > > > > > > > ✘\n"
+        f" Running On 🔥 __{UPSTREAM_REPO_BRANCH}__ 🔥\n"
         f"  イ Original Bot [Oubnew](https://github.com/fortifying/OUBnew) イ\n"
         f"➥ ✘ `NameBot                :Akeno`\n"
         f"➥ ✘ `BotVersion             :`v{VER}\n"
