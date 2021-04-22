@@ -1,5 +1,11 @@
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e35faa6a680f4d66abdffddaad76e418)](http://app.codacy.com/manual/rizgustiadi/AkenoXNew/dashboard) ![Last Commit](https://img.shields.io/github/last-commit/rizgustiadi/AkenoXNew/main) ![Contributors](https://img.shields.io/github/contributors/rizgustiadi/AkenoXNew?color=LightSlateGrey)
-# Project AkenoXNew
+<p align="center">
+    <a href="https://github.com/rizgustiadi/AkenoXNew/actions?query=workflow%3AFailCheck" > <img src="https://img.shields.io/github/workflow/status/rizgustiadi/AkenoXNew/FailCheck/sql-extended?style=for-the-badge&logo=github-actions&logoColor=white" alt="Failcheck" /></a>
+    <a href="https://www.codacy.com/manual/rizgustiadi/AkenoXNew?utm_source=github.com&utm_medium=referral&utm_content=rizgustiadi/AkenoXNew&utm_campaign=Badge_Grade"><img src="https://img.shields.io/codacy/grade/c460544d68334a51b84c83ce8d3a1e98?style=for-the-badge&logo=codacy" alt="codacy badge" /></a>
+    <a href="https://github.com/rizgustiadi/AkenoXNew/commits/sql-extended"><img src="https://img.shields.io/github/last-commit/rizgustiadi/AkenoXNew/sql-extended?style=for-the-badge&logo=github" alt="commit" /></a></br>
+    <a href="https://github.com/rizgustiadi/AkenoXNew"><img src="https://img.shields.io/github/repo-size/rizgustiadi/AkenoXNew?style=for-the-badge&logo=github" alt="size" /></a>
+    <a href="https://hub.docker.com/r/rizgustiadi/AkenoXNew"> <img src="https://img.shields.io/docker/image-size/rizgustiadi/AkenoXNew/latest?color=red&label=Docker%20Size&style=for-the-badge&logo=docker&logoColor=white" alt="docker" /></a></br>
+    <a href="https://t.me/userbotindo"> <img src="https://img.shields.io/badge/telegram-Support_Group-blue?style=social&logo=telegram" alt="support" /></a>
+</p>
 
 ![our](https://telegra.ph/file/42d57cae901ae6b0322ba.jpg)
 
