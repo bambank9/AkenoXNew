@@ -8,7 +8,15 @@ from userbot.events import register
 async def shalom(e):
     await e.edit(
         f"    🌪 My Repo 🌪\n"
-        f" ➥ [AkenoXNew](https://github.com/rizgustiadi/AkenoXNew)\n")
+        f" ➥ [AkenoXNew](https://github.com/rizgustiadi/AkenoXNew)\n"
+        f" ┈┈┈╭━━━━━╮┈┈┈┈┈\n"
+        f" ┈┈┈┃┊┊┊┊┊┃┈┈┈┈┈\n"
+        f" ┈┈┈┃┊┊╭━╮┻╮┈┈┈┈\n"
+        f" ┈┈┈╱╲┊┃▋┃▋┃┈┈┈┈\n"
+        f" ┈┈╭┻┊┊╰━┻━╮┈┈┈┈\n"
+        f" ┈┈╰┳┊╭━━━┳╯┈┈┈┈\n"
+        f" ┈┈┈┃┊┃╰━━┫┈Owner\n" 
+        f" ┈┈┈┈┈┈┏━┓┈┈┈┈┈┈")
     CMD_HELP.update(
         {
             "Akeno": ".akeno\
