@@ -116,8 +116,8 @@ G_DRIVE_CLIENT_SECRET = os.environ.get("G_DRIVE_CLIENT_SECRET", None)
 G_DRIVE_AUTH_TOKEN_DATA = os.environ.get("G_DRIVE_AUTH_TOKEN_DATA", None)
 G_DRIVE_FOLDER_ID = os.environ.get("G_DRIVE_FOLDER_ID", None)
 
-#PMPERMIT_PIC
-PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
+# CUSTOM PMPERMIT
+CUSTOM_PMPERMIT = os.environ.get("CUSTOM_PMPERMIT", None)
 
 # Zipfile module
 ZIP_DOWNLOAD_DIRECTORY = os.environ.get("ZIP_DOWNLOAD_DIRECTORY", "./zips")
