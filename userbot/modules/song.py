@@ -15,7 +15,6 @@ from youtube_dl.utils import (
     UnavailableVideoError,
     XAttrMetadataError,
 )
-from youtubesearchpython import SearchVideos
 
 from userbot import CMD_HELP
 from userbot.events import register
