@@ -38,7 +38,7 @@ from telethon.tl.types import DocumentAttributeAudio, DocumentAttributeVideo
 from userbot.utils import progress, chrome, googleimagesdownload
  
 from userbot.modules.upload_download import get_video_thumb
-from userbot.utils.FastTelethon import upload_file
+
 
 CARBONLANG = "auto"
 TTS_LANG = "en"
