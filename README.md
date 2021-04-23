@@ -28,6 +28,10 @@
 
 <p align="center">&nbsp;</p>
 
+# Generate String Session
+<p><a href="https://replit.com/@Zalloveya/AkenoXNew" /></a></p>
+
+
 # Easy way to deploy
 <p><a href="https://heroku.com/deploy?template=https://github.com/rizgustiadi/AkenoXNew/main"> <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku" /></a></p>
 
