@@ -10,34 +10,33 @@ from userbot.events import register
 async def WooMai(netase):
     if netase.fwd_from:
         return
-    track = str(artist) + " - " + str(song)
+    song = netase.pattern_match.group(1)
     chat = "@WooMaiBot"
-    link = f"/netease {track}"
-    await event.edit("`Searching...`")
-    try:
-        async with bot.conversation(chat) as conv:
-            await asyncio.sleep(2)
-            await event.edit("`Processing... Please wait`")
-            try:
-                msg = await conv.send_message(link)
-                response = await conv.get_response()
-                respond = await conv.get_response()
-                await bot.send_read_acknowledge(conv.chat_id)
-            except YouBlockedUserError:
-                await event.reply("`Please unblock @WooMaiBot and try again`")
-                return
-            await event.edit("`Sending Your Music...`")
-            await asyncio.sleep(3)
-            await bot.send_file(event.chat_id, respond)
-        await event.client.delete_messages(
-            conv.chat_id, [msg.id, response.id, respond.id]
-        )
-        await event.delete()
-    except TimeoutError:
-        return await event.edit(
-            "`Error: `@WooMaiBot` is not responding or Song not found!.`"
-        )
-
+    link = f"/netease {song}"
+    await netase.edit("```Getting Your Music```")
+    async with bot.conversation(chat) as conv:
+        await asyncio.sleep(2)
+        await netase.edit("`Downloading... Please wait`")
+        try:
+            msg = await conv.send_message(link)
+            response = await conv.get_response()
+            respond = await conv.get_response()
+            """ - don't spam notif - """
+            await bot.send_read_acknowledge(conv.chat_id)
+        except YouBlockedUserError:
+            await netase.reply("```Please unblock @WooMaiBot and try again```")
+            return
+        await netase.edit("`Sending Your Music...`")
+        await netase.delete_messages()
+        await asyncio.sleep(3)
+        await bot.send_file(netase.chat_id, respond)
+    msg = await netase.client.delete_messages(
+        conv.chat_id, [msg.id, response.id, respond.id]
+    )
+    await msg.edit(
+        f"Song name - __{link}__\nUploaded by [TeleBot](https://t.me/TeleBotSupport)"
+    )
+    await netase.delete()
 CMD_HELP.update(
         {
             "womai": ".nts\
