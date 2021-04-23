@@ -42,13 +42,6 @@ Whit replit <a href="https://replit.com/@Zalloveya/AkenoXNew">Klik Ini</a>
 
 
 
-# Updates and Support
-
-Join <a href="https://t.me/userbotindocloud">Userbot Indo Cloud</a> Channel for update notifications!
-
-Also join <a href="https://t.me/userbotindo">Userbot INDO🇮🇩</a> Telegram Group for help and support!
-
-
 
 
 
