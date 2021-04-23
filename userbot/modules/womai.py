@@ -7,18 +7,9 @@ from userbot import CMD_HELP, bot
 from userbot.events import register
 
 @register(outgoing=True, pattern=r"^.nts (.*)")
-async def _(event):
-    if event.fwd_from:
+async def WooMai(netase):
+    if netase.fwd_from:
         return
-    if event.pattern_match.group(1) == "now":
-        playing = User(LASTFM_USERNAME, lastfm).get_now_playing()
-        if playing is None:
-            return await event.edit("`Error: No current scrobble found.`")
-        artist = playing.get_artist()
-        song = playing.get_title()
-    else:
-        artist = event.pattern_match.group(2)
-        song = event.pattern_match.group(3)
     track = str(artist) + " - " + str(song)
     chat = "@WooMaiBot"
     link = f"/netease {track}"
