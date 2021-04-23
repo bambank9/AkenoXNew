@@ -41,7 +41,7 @@ from userbot.modules.upload_download import get_video_thumb
 
 
 CARBONLANG = "auto"
-TTS_LANG = "en"
+TTS_LANG = "id"
 TRT_LANG = "en"
  
  
