@@ -7,7 +7,7 @@ import os
 
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
-from telebot import CMD_HELP, bot
+from userbot import CMD_HELP, bot
 from userbot.events import register
 
 @register(outgoing=True, pattern=r"^.dzd (.*)")
