@@ -43,4 +43,3 @@ CMD_HELP.update(
 \nUsage: gives a nice Gitub Page as output."
         }
     )
-© 2021 GitHub, Inc.
