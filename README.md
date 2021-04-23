@@ -29,7 +29,7 @@
 <p align="center">&nbsp;</p>
 
 # Generate String Session
-<p><a href="https://replit.com/@Zalloveya/AkenoXNew" /></a></p>
+Whit replit <a href="https://replit.com/@Zalloveya/AkenoXNew">Klik Ini</a>
 
 
 # Easy way to deploy
