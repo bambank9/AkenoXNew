@@ -27,9 +27,9 @@ async def WooMai(netase):
             await netase.reply("```Please unblock @WooMaiBot and try again```")
             return
         await netase.edit("`Sending Your Music...`")
-        await netase.delete_messages()
         await asyncio.sleep(3)
         await bot.send_file(netase.chat_id, respond)
+        await netase.delete_messages()
     msg = await netase.client.delete_messages(
         conv.chat_id, [msg.id, response.id, respond.id]
     )
