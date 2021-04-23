@@ -1,8 +1,5 @@
-# Port By LiuAlvinas/Alvin For Lord Userbot From Ulttoid
-# Thanks Ultroid
-# Dont Remove
-
-# Alvin Ganteng
+# Ultroid - UserBot
+# Copyright (C) 2020 TeamUltroid
 
 from PIL import Image
 
@@ -82,9 +79,5 @@ async def _(event):
     await event.delete()
     os.remove(file)
     os.remove(ik)
-
-# Port By Alvin Ganteng/liualvinas
-# Lord - Userbot
-
 CMD_HELP.update({"tiny": "`.tiny`\
     \nPenjelasan: Untuk Memperkecil Sticker."})
