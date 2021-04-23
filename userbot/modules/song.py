@@ -24,7 +24,7 @@ from userbot.events import register
 
 @register(outgoing=True, pattern=r"^.sng (.*)")
 async def download_video(tele):
-    x = await eor(tele, "Searching...")
+    x = await x.edit(tele, "Searching...")
     url = tele.pattern_match.group(1)
     if not url:
         return await x.edit("**Error**\nUsage - `.song <song name>`")
