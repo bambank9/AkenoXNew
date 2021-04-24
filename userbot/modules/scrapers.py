@@ -612,11 +612,6 @@ def deEmojify(inputString):
  
  
 CMD_HELP.update({
-    'img':
-    '`.img` <search_query>\
-        \nUsage: Does an image search on Google and shows 5 images.'
-})
-CMD_HELP.update({
     'currency':
     '`.currency` <amount> <from> <to>\
         \nUsage: Converts various currencies for you.'
