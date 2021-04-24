@@ -4,7 +4,7 @@ from userbot import CMD_HELP
 from userbot.events import register
 
 @register(outgoing=True, pattern=r"^.hack (.*)")
-async def hack(e):
+async def shalom(e):
     await e.edit(
         f"**Connecting To Telegram Data Centre**",
         f"`Target Selected By Hacker: @TeleBotHelp`",
