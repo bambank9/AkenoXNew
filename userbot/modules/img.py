@@ -14,7 +14,7 @@ from userbot import CMD_HELP
 from userbot.google_images_download import googleimagesdownload
 from userbot.events import register
 
-@register(outgoing=True, pattern="^.img (.*)")
+@register(outgoing=True, pattern=r"^.img (.*)")
 async def img_sampler(event):
     await edit.event("`Processing ...`")
     reply = await event.get_reply_message()
