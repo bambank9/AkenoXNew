@@ -1448,8 +1448,8 @@ async def nih(e):
         await e.edit(
             "`\n(\_/)`"
             "`\n(●_●)`"
-            "`\n />🌹 *ini buat kamu`"
-            "`\n                    `"
+            "`\n />🌹 *ini buat kamu`")
+        await e.edit(
             "`\n(\_/)`"
             "`\n(●_●)`"
             "`\n🌹<\  *tapi boong`"
