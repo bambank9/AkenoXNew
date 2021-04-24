@@ -11,7 +11,7 @@ from userbot.events import register
 
 
 @register(outgoing=True, pattern=r"^.speedtest (.*)")
-async def _(event):
+async def speedtest(event):
     if event.fwd_from:
         return
     input_str = event.pattern_match.group(1)
@@ -23,7 +23,7 @@ async def _(event):
         as_document = True
     elif input_str == "text":
         as_text = True
-    await eor(event, "`Calculating my internet speed. Please wait!`")
+    await event.edit("`Calculating my internet speed. Please wait!`")
     start = datetime.now()
     s = speedtest.Speedtest()
     s.get_best_server()
@@ -45,8 +45,7 @@ async def _(event):
         response = s.results.share()
         speedtest_image = response
         if as_text:
-            await eor(
-                event,
+            await event.edit(
                 """`SpeedTest completed in {} seconds`
 `Download: {}`
 `Upload: {}`
@@ -72,8 +71,7 @@ async def _(event):
             )
             await event.delete()
     except Exception as exc:
-        await eor(
-            event,
+        await event.edit(
             """**SpeedTest** completed in {} seconds
 Download: {}
 Upload: {}
