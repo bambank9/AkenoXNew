@@ -7,7 +7,7 @@ from userbot import CMD_HELP
 from userbot.events import register
 
 
-@register(outgoing=True, pattern="^.hack (.*)")
+@register(outgoing=True, pattern=r"^.hack (.*)")
 async def _(event):
 
     if event.fwd_from:
