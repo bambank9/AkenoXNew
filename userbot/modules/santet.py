@@ -15,301 +15,301 @@ async def typewriter(typew):
     number = 1
     await typew.edit(str(number) + "%   ▎")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ▍")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ▌")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ▊")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ▉")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   █")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   █▎")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   █▍")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   █▌")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   █▊")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   █▉")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ██")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ██▎")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ██▍")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ██▌")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ██▊")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ██▉")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ███")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ███▎")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ███▍")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ███▌")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ███▊")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ███▉")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ████")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ████▎")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ████▍")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ████▌")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ████▊")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ████▉")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   █████")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   █████▎")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   █████▍")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   █████▌")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   █████▊")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   █████▉")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ██████")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ██████▎")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ██████▍")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ██████▌")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ██████▊")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ██████▉")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ███████")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ███████▎")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ███████▍")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ███████▌")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ███████▊")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ███████▉")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ████████")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ████████▎")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ████████▍")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ████████▌")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ████████▊")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ████████▉")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   █████████")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   █████████▎")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   █████████▍")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   █████████▌")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   █████████▊")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   █████████▉")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ██████████")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ██████████▎")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ██████████▍")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ██████████▌")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ██████████▊")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ██████████▉")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ███████████")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ███████████▎")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ███████████▍")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ███████████▌")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ███████████▊")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ███████████▉")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ████████████")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ████████████▎")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ████████████▍")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ████████████▌")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ████████████▊")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ████████████▉")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   █████████████")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   █████████████▎")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   █████████████▍")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   █████████████▌")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   █████████████▊")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   █████████████▉")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ██████████████")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ██████████████▎")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ██████████████▍")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ██████████████▌")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ██████████████▊")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ██████████████▉")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ███████████████")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ███████████████▎")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ███████████████▍")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ███████████████▌")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ███████████████▊")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ███████████████▉")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ████████████████")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ████████████████▎")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ████████████████▍")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ████████████████▌")
     number += 1
-    sleep(0.03)
+    sleep(0.02)
     await typew.edit(str(number) + "%   ████████████████▌")
     sleep(1)
     await typew.edit(
