@@ -27,12 +27,12 @@ async def WooMai(netase):
             await netase.reply("```Please unblock @WooMaiBot and try again```")
             return
         await netase.edit("`Sending Your Music...`")
-        await msg.edit(f"Song name - __{link}__\nUploaded by [TeleBot](https://t.me/TeleBotSupport)")
         await asyncio.sleep(3)
         await bot.send_file(netase.chat_id, respond)
     msg = await netase.client.delete_messages(
         conv.chat_id, [msg.id, response.id, respond.id]
     )
+    await msg.edit(f"Song name - __{link}__\nUploaded by [zal]")
     await netase.delete()
 CMD_HELP.update(
         {
