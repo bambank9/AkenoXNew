@@ -32,7 +32,7 @@ async def WooMai(netase):
     msg = await netase.client.delete_messages(
         conv.chat_id, [msg.id, response.id, respond.id]
     )
-    await msg.edit(f"Song name - __{link}__\nUploaded by [zal]")
+    await netase.edit(f"Song name - __{link}__\nUploaded by [zal]")
     await netase.delete()
 CMD_HELP.update(
         {
