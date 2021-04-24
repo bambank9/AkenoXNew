@@ -9,14 +9,12 @@ import os
 import shutil
 from re import findall
 
-from uniborg.util import admin_cmd
 
 from userbot import CMD_HELP
 from userbot.google_images_download import googleimagesdownload
+from userbot.events import register
 
-
-@telebot.on(admin_cmd(pattern="img ?(.*)"))
-@telebot.on(sudo_cmd(pattern="img ?(.*)", allow_sudo=True))
+@register(outgoing=True, pattern="^.img (.*)")
 async def img_sampler(event):
     await eor(event, "`Processing ...`")
     reply = await event.get_reply_message()
@@ -55,5 +53,9 @@ async def img_sampler(event):
     shutil.rmtree(os.path.dirname(os.path.abspath(lst[0])))
     await event.delete()
 
-
-CMD_HELP.update({"img": ".img <query>\nUse - Get images matching the query."})
+CMD_HELP.update(
+        {
+            "img": ".img\
+\nUsage: untuk mencari gambar"
+        }
+    )
