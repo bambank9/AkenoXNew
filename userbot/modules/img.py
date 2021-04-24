@@ -16,14 +16,14 @@ from userbot.events import register
 
 @register(outgoing=True, pattern=r"^.img (.*)")
 async def img_sampler(event):
-    await edit.event("`Processing ...`")
+    await event.edit("`Processing ...`")
     reply = await event.get_reply_message()
     if event.pattern_match.group(1):
         query = event.pattern_match.group(1)
     elif reply:
         query = reply.message
     else:
-        await edit.event("`What I am Supposed to Search u Dumb Ass(Donkey)`")
+        await event.edit("`What I am Supposed to Search u Dumb Ass(Donkey)`")
         return
 
     lim = findall(r"lim=\d+", query)
