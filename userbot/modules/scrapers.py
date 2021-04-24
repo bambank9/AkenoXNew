@@ -97,42 +97,7 @@ async def carbon_api(e):
     await e.delete()  # Deleting msg
  
  
-@register(outgoing=True, pattern="^.img (.*)")
-async def img_sampler(event):
-    """For .img command, search and return images matching the query."""
-    await event.edit("`Processing...`")
-    query = event.pattern_match.group(1)
-    lim = findall(r"lim=\d+", query)
-    try:
-        lim = lim[0]
-        lim = lim.replace("lim=", "")
-        query = query.replace("lim=" + lim[0], "")
-    except IndexError:
-        lim = 7
-    response = googleimagesdownload()
- 
-    # creating list of arguments
-    arguments = {
-        "keywords": query,
-        "limit": lim,
-        "format": "jpg",
-        "no_directory": "no_directory"
-    }
 
-    # if the query contains some special characters, googleimagesdownload errors out
-    # this is a temporary workaround for it (maybe permanent)
-    try:
-        paths = response.download(arguments)
-    except Exception as e:
-        return await event.edit(f"`Error: {e}`")
-
-        
-    lst = paths[0][query]
-    await event.client.send_file(
-        await event.client.get_input_entity(event.chat_id), lst)
-    shutil.rmtree(os.path.dirname(os.path.abspath(lst[0])))
-    await event.delete()
- 
  
 @register(outgoing=True, pattern=r"^\.currency ([\d\.]+) ([a-zA-Z]+) ([a-zA-Z]+)")
 async def moni(event):
