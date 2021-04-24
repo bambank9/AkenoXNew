@@ -29,7 +29,7 @@ async def WooMai(netase):
         await netase.edit("`Sending Your Music...`")
         await asyncio.sleep(3)
         await bot.send_file(netase.chat_id, respond)
-        await msg.edit(f"Song name - __{link}__\nUploaded by [TeleBot](https://t.me/TeleBotSupport)")
+        await netase.edit(f"Song name - __{link}__\nUploaded by [TeleBot](https://t.me/TeleBotSupport)")
     msg = await netase.client.delete_messages(
         conv.chat_id, [msg.id, response.id, respond.id]
     )
