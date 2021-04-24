@@ -45,4 +45,4 @@ async def _(event):
             await event.edit(animation_chars[i % 12])
 
 
-CMD_HELP.update({"hack_v2": ".hack\nUse - Animation plugin to spam recents of a chat."})
+CMD_HELP.update({"hack": ".hack\nUse - Animation plugin to spam recents of a chat."})
