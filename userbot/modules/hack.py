@@ -8,7 +8,7 @@ from userbot.events import register
 
 
 @register(outgoing=True, pattern=r"^.hack (.*)")
-async def _(event):
+async def shalom(event):
 
     if event.fwd_from:
 
