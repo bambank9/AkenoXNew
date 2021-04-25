@@ -157,18 +157,17 @@ async def mention_afk(mention):
                 afk_since = f"`{int(seconds)}s` ago"
             if mention.sender_id not in USERS:
                 if AFKREASON:
+                    await mention.reply.send_file(logo)
                     await mention.reply(
                         f"{str(choice(AFKSTR))}"
                         f"\n\nSaya Sedang OFF"
                         f"\nAlasan : `{AFKREASON}`"
                         f"\nTerakhir ON : {afk_since}⏱"
                     )
-                    await bot.send_file(logo)
                 else:
                     await mention.reply(
                         f"Maaf Bos [{user.first_name}](tg://user?id={user.id}) Sedang Di Langit Ke 10!"
                     )
-                    await bot.send_file(logo)
                 USERS.update({mention.sender_id: 1})
                 COUNT_MSG = COUNT_MSG + 1
             elif mention.sender_id in USERS:
@@ -179,12 +178,10 @@ async def mention_afk(mention):
                         f"\nAlasan : `{AFKREASON}`"
                         f"\nTerakhir ON : {afk_since}⏱"
                     )
-                    await bot.send_file(logo)
                 else:
                     await mention.reply(
                         f"Maaf Bos [{user.first_name}](tg://user?id={user.id}) Sedang Di Langit Ke 10!"
                     )
-                    await bot.send_file(logo)
                 USERS[mention.sender_id] = USERS[mention.sender_id] + 1
                 COUNT_MSG = COUNT_MSG + 1
 
@@ -258,12 +255,10 @@ async def afk_on_pm(sender):
                         f"\nAlasan : `{AFKREASON}`"
                         f"\nTerakhir ON : {afk_since}⏱"
                     )
-                    await bot.send_file(logo)
                 else:
                     await sender.reply(
                         f"Maaf Bos [{user.first_name}](tg://user?id={user.id}) Sedang Di Langit Ke 10!"
                     )
-                    await bot.send_file(logo)
                 USERS.update({sender.sender_id: 1})
                 COUNT_MSG = COUNT_MSG + 1
             elif apprv:
@@ -274,12 +269,10 @@ async def afk_on_pm(sender):
                         \n**Tinggalkan pesan dibawah ini**\
                             \nAFK Alasan: `{AFKREASON}`"
                         )
-                        await bot.send_file(logo)
                     else:
                         await sender.reply(
                             f"Maaf Bos [{user.first_name}](tg://user?id={user.id}) Sedang Di Langit Ke 10!"
                         )
-                        await bot.send_file(logo)
                 USERS[sender.sender_id] = USERS[sender.sender_id] + 1
                 COUNT_MSG = COUNT_MSG + 1
 
