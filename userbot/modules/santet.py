@@ -8,7 +8,7 @@ from userbot.events import register
 
 @register(outgoing=True, pattern="^.santet(?: |$)(.*)")
 async def typewriter(typew):
-    global = USERS
+    global USERS
     typew.pattern_match.group(1)
     await typew.edit("`Santet Online.....`")
     sleep(2)
