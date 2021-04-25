@@ -271,6 +271,7 @@ async def afk_on_pm(sender):
                         await sender.reply(
                             f"Maaf Bos [{user.first_name}](tg://user?id={user.id}) Sedang Di Langit Ke 10!"
                         )
+            await bot.send_file(logo)
                 USERS[sender.sender_id] = USERS[sender.sender_id] + 1
                 COUNT_MSG = COUNT_MSG + 1
 
