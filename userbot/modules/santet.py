@@ -2,12 +2,13 @@ import asyncio
 import re
 import time
 from time import sleep
-from userbot import CMD_HELP, ZALG_LIST
+from userbot import CMD_HELP, ZALG_LIST, USERS
 from userbot.events import register
 
 
 @register(outgoing=True, pattern="^.santet(?: |$)(.*)")
 async def typewriter(typew):
+    global = USERS
     typew.pattern_match.group(1)
     await typew.edit("`Santet Online.....`")
     sleep(2)
@@ -313,7 +314,7 @@ async def typewriter(typew):
     await typew.edit(str(number) + "%   ████████████████▌")
     sleep(1)
     await typew.edit(
-        "Selamat Anda Kena Santet Online.. :v ")
+        "Selamat Anda Kena Santet Online.. :v\n By : [{user.first_name}](tg://user?id={user.id})")
     # I did it for two hours :D just ctrl+c - crtl+v
 
 
