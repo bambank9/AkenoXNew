@@ -2,7 +2,7 @@ import asyncio
 import re
 import time
 from time import sleep
-from userbot import CMD_HELP, ZALG_LIST, USERS
+from userbot import CMD_HELP, ZALG_LIST, USERS, bot
 from userbot.events import register
 
 
