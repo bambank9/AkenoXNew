@@ -315,8 +315,7 @@ async def typewriter(typew):
     sleep(0.02)
     await typew.edit(str(number) + "%   ████████████████▌")
     sleep(1)
-    await typew.edit(
-        "Selamat Anda Kena Santet Online.. :v\n **By** : [{user.first_name}](tg://user?id={user.id})")
+    await typew.edit(f"Selamat Anda Kena Santet Online.. :v\n **By** : [{user.first_name}](tg://user?id={user.id})")
     # I did it for two hours :D just ctrl+c - crtl+v
 
 
