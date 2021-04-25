@@ -181,6 +181,7 @@ async def mention_afk(mention):
                     await mention.reply(
                         f"Maaf Bos [{user.first_name}](tg://user?id={user.id}) Sedang Di Langit Ke 10!"
                     )
+             await bot.send_file(logo)
                 USERS[mention.sender_id] = USERS[mention.sender_id] + 1
                 COUNT_MSG = COUNT_MSG + 1
 
