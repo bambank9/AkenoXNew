@@ -7,7 +7,7 @@
     Information Superhighway (yes, Internet). """
 
 from datetime import datetime
-
+from asyncio import sleep
 from speedtest import Speedtest
 from userbot import CMD_HELP, StartTime, bot, USERS
 from userbot.events import register
@@ -86,29 +86,19 @@ async def pingme(pong):
     user.name = user.first_name
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    await pong.edit("`Poooong........`")
+    await pong.edit(
+        f"🌪"
+        f"🌪 🌪"
+        f"🌪 🌪 🌪"
+        f"🌪 🌪 🌪 🌪"
+        f"🌪 🌪 🌪 🌪 🌪")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(f"➥ **Pong** : %sms\n➥ **Akeno Uptime** : {uptime}\n➥ **OWNER** : [{user.first_name}](tg://user?id={user.id})\n" % (duration))
-
-@register(outgoing=True, pattern="^.pong$")
-async def pingme(pong):
-    """ For .ping command, ping the userbot from any chat.  """
-    global USERS
-    user = await bot.get_me()
-    user.username = user.first_name
-    uptime = await get_readable_time((time.time() - StartTime))
-    start = datetime.now()
-    await pong.edit("`gass!`")
-    end = datetime.now()
-    duration = (end - start).microseconds / 1000
-    await pong.edit(f"➥ **Ping** : %sms\n➥ **Akeno Uptime** : {uptime}\n➥ **OWNER** : [{user.first_name}](tg://user?id={user.id})\n" % (duration))
 
 CMD_HELP.update(
     {"ping": "`.ping`\
     \nUsage: Shows how long it takes to ping your bot.\
     \n\n`.speed`\
     \nUsage: Does a speedtest and shows the results.\
-    \n\n`.pong`\
-    \nUsage: Shows how long it takes to ping your bot."
-     })
+    })
