@@ -157,13 +157,13 @@ async def mention_afk(mention):
                 afk_since = f"`{int(seconds)}s` ago"
             if mention.sender_id not in USERS:
                 if AFKREASON:
-                    await mention.reply.send_file(LOGO)
                     await mention.reply(
                         f"{str(choice(AFKSTR))}"
                         f"\n\nSaya Sedang OFF"
                         f"\nAlasan : `{AFKREASON}`"
                         f"\nTerakhir ON : {afk_since}⏱"
                     )
+                    await bot.send_file(mention.sender_id, logo, caption=AFKREASON)
                 else:
                     await mention.reply(
                         f"Maaf Bos [{user.first_name}](tg://user?id={user.id}) Sedang Di Langit Ke 10!"
