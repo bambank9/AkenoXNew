@@ -88,7 +88,6 @@ async def pingme(pong):
     start = datetime.now()
     await pong.edit(
         "🌪")
-    await sleep(0.1)
     await pong.edit(
         "🌪 🌪")
     await sleep(0.1)
