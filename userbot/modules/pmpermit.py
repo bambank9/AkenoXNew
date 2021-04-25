@@ -23,6 +23,9 @@ from userbot import (
 from userbot.events import register
  
 # ========================= CONSTANTS ============================
+LOGO = os.environ.get("LOGO", "https://telegra.ph/file/42d57cae901ae6b0322ba.jpg")
+PM_WARNS = {}
+PREV_REPLY_MESSAGE = {}
 DEF_UNAPPROVED_MSG = (
     str(CUSTOM_PMPERMIT)
     if CUSTOM_PMPERMIT
