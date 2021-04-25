@@ -157,7 +157,7 @@ async def mention_afk(mention):
                 afk_since = f"`{int(seconds)}s` ago"
             if mention.sender_id not in USERS:
                 if AFKREASON:
-                    await mention.reply.send_file(logo)
+                    await mention.reply.send_file(LOGO)
                     await mention.reply(
                         f"{str(choice(AFKSTR))}"
                         f"\n\nSaya Sedang OFF"
