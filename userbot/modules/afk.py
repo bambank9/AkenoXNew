@@ -163,7 +163,7 @@ async def mention_afk(mention):
                         f"\nAlasan : `{AFKREASON}`"
                         f"\nTerakhir ON : {afk_since}⏱"
                     )
-                    await bot.send_file(mention.sender_id, logo, caption=AFKREASON)
+                    await bot.send_file(mention.sender_id, LOGO, mention=AFKREASON)
                 else:
                     await mention.reply(
                         f"Maaf Bos [{user.first_name}](tg://user?id={user.id}) Sedang Di Langit Ke 10!"
