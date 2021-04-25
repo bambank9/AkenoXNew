@@ -100,4 +100,4 @@ CMD_HELP.update(
     {"ping": "`.ping`\
     \nUsage: Shows how long it takes to ping your bot.\
     \n\n`.speed`\
-    \nUsage: Does a speedtest and shows the results.})
+    \nUsage: Does a speedtest and shows the results."})
