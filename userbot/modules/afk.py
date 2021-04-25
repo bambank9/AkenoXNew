@@ -115,6 +115,7 @@ async def mention_afk(mention):
     """ This function takes care of notifying the people who mention you that you are AFK."""
     global COUNT_MSG
     global USERS
+    logo = LOGO
     global ISAFK
     global USER_AFK  # pylint:disable=E0602
     global afk_time  # pylint:disable=E0602
@@ -127,7 +128,6 @@ async def mention_afk(mention):
     afk_since = "a while ago"
     if mention.message.mentioned and not (await mention.get_sender()).bot:
         if ISAFK:
-            logo = LOGO
             now = datetime.now()
             datime_since_afk = now - afk_time  # pylint:disable=E0602
             time = float(datime_since_afk.seconds)
@@ -157,6 +157,7 @@ async def mention_afk(mention):
                 afk_since = f"`{int(seconds)}s` ago"
             if mention.sender_id not in USERS:
                 if AFKREASON:
+                    await bot.send_file(logo)
                     await mention.reply(
                         f"{str(choice(AFKSTR))}"
                         f"\n\nSaya Sedang OFF"
@@ -164,6 +165,7 @@ async def mention_afk(mention):
                         f"\nTerakhir ON : {afk_since}⏱"
                     )
                 else:
+                    await bot.send_file(logo)
                     await mention.reply(
                         f"Maaf Bos [{user.first_name}](tg://user?id={user.id}) Sedang Di Langit Ke 10!"
                     )
@@ -171,6 +173,7 @@ async def mention_afk(mention):
                 COUNT_MSG = COUNT_MSG + 1
             elif mention.sender_id in USERS:
                 if AFKREASON:
+                    await bot.send_file(logo)
                     await mention.reply(
                         f"{str(choice(AFKSTR))}"
                         f"\n\nSaya Sedang OFF"
@@ -178,10 +181,10 @@ async def mention_afk(mention):
                         f"\nTerakhir ON : {afk_since}⏱"
                     )
                 else:
+                    await bot.send_file(logo)
                     await mention.reply(
                         f"Maaf Bos [{user.first_name}](tg://user?id={user.id}) Sedang Di Langit Ke 10!"
                     )
-             await bot.send_file(logo)
                 USERS[mention.sender_id] = USERS[mention.sender_id] + 1
                 COUNT_MSG = COUNT_MSG + 1
 
@@ -190,6 +193,7 @@ async def mention_afk(mention):
 async def afk_on_pm(sender):
     """ Function which informs people that you are AFK in PM """
     global ISAFK
+    logo = LOGO
     global USERS
     global COUNT_MSG
     global COUNT_MSG
@@ -248,6 +252,7 @@ async def afk_on_pm(sender):
                 afk_since = f"`{int(seconds)}s` ago"
             if sender.sender_id not in USERS:
                 if AFKREASON:
+                    await bot.send_file(logo)
                     await sender.reply(
                         f"{str(choice(AFKSTR))}\n"
                         f"\n\nSaya Sedang OFF"
@@ -255,6 +260,7 @@ async def afk_on_pm(sender):
                         f"\nTerakhir ON : {afk_since}⏱"
                     )
                 else:
+                    await bot.send_file(logo)
                     await sender.reply(
                         f"Maaf Bos [{user.first_name}](tg://user?id={user.id}) Sedang Di Langit Ke 10!"
                     )
@@ -263,16 +269,17 @@ async def afk_on_pm(sender):
             elif apprv:
                 if USERS[sender.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
+                        await bot.send_file(logo)
                         await sender.reply(
                             f"**Saya bilang, bang rizal lagi off** {afk_since}.\
                         \n**Tinggalkan pesan dibawah ini**\
                             \nAFK Alasan: `{AFKREASON}`"
                         )
                     else:
+                        await bot.send_file(logo)
                         await sender.reply(
                             f"Maaf Bos [{user.first_name}](tg://user?id={user.id}) Sedang Di Langit Ke 10!"
                         )
-            await bot.send_file(logo)
                 USERS[sender.sender_id] = USERS[sender.sender_id] + 1
                 COUNT_MSG = COUNT_MSG + 1
 
