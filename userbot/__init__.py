@@ -275,5 +275,7 @@ COUNT_PM = {}
 LASTMSG = {}
 CMD_HELP = {}
 ZALG_LIST = {}
+CMD_LIST = {}
+CMD_HNDLR = Var.CMD_HNDLR
 ISAFK = False
 AFKREASON = None
