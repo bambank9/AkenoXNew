@@ -17,7 +17,7 @@ from dotenv import load_dotenv
 from requests import get
 from telethon import TelegramClient
 from telethon.sessions import StringSession
-
+from userbot.akenoConfig import Var
 load_dotenv("config.env")
 
 StartTime = time.time()
