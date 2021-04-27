@@ -17,7 +17,7 @@
 import os
 
 from userbot import ALIVE_NAME, CMD_HELP, CMD_HNDLR, CMD_LIST
-from userbot.AkenoConfig import Config
+from userbot.akenoConfig import Config
 from userbot.events import register
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "TeleBot User"
 CMD_HNDLR = Config.CMD_HNDLR
