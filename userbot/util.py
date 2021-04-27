@@ -3,7 +3,7 @@ import math
 from userbot import bot
 from telethon import events
 from pathlib import Path
-from userbot.AkenoConfig import Var, Config
+from userbot.akenoConfig import Var, Config
 from userbot import LOAD_PLUG
 from userbot import CMD_LIST
 import re
