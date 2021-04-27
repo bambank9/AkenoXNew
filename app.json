@@ -39,6 +39,16 @@
       "description": "Your Heroku API key, get it from 'https://dashboard.heroku.com/account'",
       "value": ""
     },
+    "TG_BOT_TOKEN_BF_HER": {
+      "description": "Needed for inline buttons maker. Make a bot at @BotFather and get the token of your bot.",
+      "value": "",
+      "required": true
+    },
+    "TG_BOT_USER_NAME_BF_HER": {
+      "description": "Needed for inline buttons maker. Make a bot at [BotFather](http://telegram.dog/BotFather) and get the username of your bot. Needed for .help to work.",
+      "value": "",
+      "required": true
+    },
     "HEROKU_APP_NAME": {
       "description": "FILL THE VALUE, SAME AS THAT YOU CREATE IN APP NAME!.",
       "required": true
@@ -168,6 +178,11 @@
     "ALIVE_NAME": {
       "description": "Name to show in .alive message, Fill this with your name or else.",
       "required": true
+    },
+    "CMD_HNDLR": {
+      "description": "Used to invoke commands, leave blank for default, (dot)",
+      "value": "",
+      "required": false
     },
     "G_DRIVE_DATA": {
       "description": "Your client_secret.json.",
