@@ -22,6 +22,11 @@ load_dotenv("config.env")
 
 StartTime = time.time()
 
+
+CMD_LIST = {}
+CMD_HNDLR = Var.CMD_HNDLR
+
+
 # Bot Logs setup:
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
 
@@ -275,7 +280,5 @@ COUNT_PM = {}
 LASTMSG = {}
 CMD_HELP = {}
 ZALG_LIST = {}
-CMD_LIST = {}
-CMD_HNDLR = Var.CMD_HNDLR
 ISAFK = False
 AFKREASON = None
