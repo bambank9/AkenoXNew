@@ -1,9 +1,15 @@
+"""
+Available Commands:
+
+.comli"""
+
+
 import asyncio
 from userbot import CMD_HELP
 from userbot.events import register
 
 
-@register(outgoing=True, pattern=r"^.comli (.*)")
+@register(outgoing=True, pattern=r"^.(.*)")
 async def _(event):
 
     if event.fwd_from:
