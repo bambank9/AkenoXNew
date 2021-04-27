@@ -1,11 +1,11 @@
 import sys
 import math
-from telebot import bot
+from userbot import bot
 from telethon import events
 from pathlib import Path
-from telebot.telebotConfig import Var, Config
-from telebot import LOAD_PLUG
-from telebot import CMD_LIST
+from userbot.AkenoConfig import Var, Config
+from userbot import LOAD_PLUG
+from userbot import CMD_LIST
 import re
 import logging
 import inspect
@@ -90,19 +90,19 @@ def load_module(shortname):
     if shortname.startswith("__"):
         pass
     elif shortname.endswith("_"):
-        import telebot.utils
+        import userbot.util
         import importlib
-        path = Path(f"telebot/plugins/{shortname}.py")
-        name = "telebot.plugins.{}".format(shortname)
+        path = Path(f"userbot/modules/{shortname}.py")
+        name = "userbot.modules.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
         print("Successfully (re)imported " + shortname)
     else:
-        import telebot.utils
+        import userbot.util
         import importlib
-        path = Path(f"telebot/plugins/{shortname}.py")
-        name = "telebot.plugins.{}".format(shortname)
+        path = Path(f"userbot/modules/{shortname}.py")
+        name = "userbot.modules.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.bot = bot
@@ -111,7 +111,7 @@ def load_module(shortname):
         mod.command = command
         mod.logger = logging.getLogger(shortname)
         # support for uniborg
-        sys.modules["uniborg.util"] = telebot.utils
+        sys.modules["uniborg.util"] = userbot.util
         mod.Config = Config
         mod.borg = bot
         mod.telebot = bot
@@ -121,14 +121,14 @@ def load_module(shortname):
         mod.edit_or_reply = edit_or_reply
         mod.eor = eor
         # support for paperplaneextended
-        sys.modules["telebot.events"] = telebot.utils
+        sys.modules["userbot.events"] = userbot.util
         spec.loader.exec_module(mod)
         # for imports
-        sys.modules["telebot.plugins." + shortname] = mod
+        sys.modules["userbot.modules." + shortname] = mod
         print("Successfully (re)imported " + shortname)
         # support for other third-party plugins
-        sys.modules["userbot.utils"] = telebot.utils
-        sys.modules["userbot"] = telebot
+        sys.modules["userbot.utils"] = userbot.util
+        sys.modules["userbot"] = userbot
 
 
 def remove_plugin(shortname):
@@ -139,7 +139,7 @@ def remove_plugin(shortname):
             del LOAD_PLUG[shortname]
 
         except BaseException:
-            name = f"telebot.plugins.{shortname}"
+            name = f"userbot.modules.{shortname}"
 
             for i in reversed(range(len(bot._event_builders))):
                 ev, cb = bot._event_builders[i]
@@ -396,8 +396,8 @@ def start_mybot(shortname):
         import sys
         from pathlib import Path
 
-        path = Path(f"telebot/plugins/mybot/{shortname}.py")
-        name = "telebot.plugins.mybot.{}".format(shortname)
+        path = Path(f"userbot/modules/mybot/{shortname}.py")
+        name = "userbot.modules.mybot.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
@@ -408,8 +408,8 @@ def start_mybot(shortname):
         import sys
         from pathlib import Path
 
-        path = Path(f"telebot/plugins/mybot/{shortname}.py")
-        name = "telebot.plugins.mybot.{}".format(shortname)
+        path = Path(f"userbot/modules/mybot/{shortname}.py")
+        name = "userbot.modules.mybot.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.tgbot = bot.tgbot
@@ -426,8 +426,8 @@ def load_pmbot(shortname):
         import sys
         from pathlib import Path
 
-        path = Path(f"telebot/plugins/mybot/pmbot/{shortname}.py")
-        name = "telebot.plugins.mybot.pmbot.{}".format(shortname)
+        path = Path(f"userbot/modules/mybot/pmbot/{shortname}.py")
+        name = "userbot.modules.mybot.pmbot.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
@@ -438,8 +438,8 @@ def load_pmbot(shortname):
         import sys
         from pathlib import Path
 
-        path = Path(f"telebot/plugins/mybot/pmbot/{shortname}.py")
-        name = "telebot.plugins.mybot.pmbot.{}".format(shortname)
+        path = Path(f"userbot/modules/mybot/pmbot/{shortname}.py")
+        name = "userbot.modules.mybot.pmbot.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.tgbot = bot.tgbot
