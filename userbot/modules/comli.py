@@ -16,7 +16,7 @@ async def _(event):
 
     input_str = event.pattern_match.group(1)
 
-    if input_str == "fuk":
+    if input_str == "comli":
 
         await event.edit(input_str)
 
@@ -29,7 +29,7 @@ async def _(event):
             await event.edit(animation_chars[i % 4])
 CMD_HELP.update(
         {
-            "nakal": ".comli\
+            "comli": ".comli\
 \nUsage: gives a nice Gitub Page as output."
         }
     )
