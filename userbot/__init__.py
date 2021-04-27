@@ -22,8 +22,10 @@ load_dotenv("config.env")
 
 StartTime = time.time()
 
-
+CMD_HELP = {}
 CMD_LIST = {}
+LOAD_PLUG = {}
+INT_PLUG = ""
 CMD_HNDLR = Var.CMD_HNDLR
 
 
