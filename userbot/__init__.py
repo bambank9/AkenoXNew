@@ -70,8 +70,11 @@ STRING_SESSION = os.environ.get("STRING_SESSION", None)
 DEEZER_ARL_TOKEN = os.environ.get("DEEZER_ARL_TOKEN", None)
 
 # Logging channel/group ID configuration.
-BOTLOG_CHATID = int(os.environ.get("BOTLOG_CHATID", None))
-
+BOTLOG_CHATID = os.environ.get("BOTLOG_CHATID", None)
+    try:
+        BOTLOG_CHATID = int(BOTLOG_CHATID)
+    except BaseException:
+        pass
 # Github Credentials for updater and Gitupload.
 GIT_REPO_NAME = os.environ.get("GIT_REPO_NAME", None)
 GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
@@ -84,6 +87,13 @@ LOGSPAMMER = sb(os.environ.get("LOGSPAMMER", "False"))
 GENIUS_API_TOKEN = os.environ.get("GENIUS", None)
 # Genius lyrics get this value from https://genius.com/developers both has same values
 GENIUS = os.environ.get("GENIUS_API_TOKEN", None)
+
+# for autopic
+AUTOPIC_TEXT = os.environ.get(
+    "AUTOPIC_TEXT",
+    "Life Is too Short.\n And so is your TG account.")
+AUTO_PIC_FONT = os.environ.get("AUTOPIC_FONT", "DejaVuSans.ttf")
+AUTOPIC_FONT_COLOUR = os.environ.get("AUTOPIC_FONT_COLOUR", None)
 
 # Quotes API Token
 QUOTES_API_TOKEN = os.environ.get("QUOTES_API_TOKEN", None)
