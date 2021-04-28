@@ -14,7 +14,7 @@
   "success_url": "https://t.me/PPE_Support",
   "stack": "container",
   "env": {
-    "API_ID": {
+    "APP_ID": {
       "description": "Get this value from my.telegram.org.",
       "required": true
     },
