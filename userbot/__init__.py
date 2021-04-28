@@ -71,7 +71,10 @@ DEEZER_ARL_TOKEN = os.environ.get("DEEZER_ARL_TOKEN", None)
 
 # Logging channel/group ID configuration.
 BOTLOG_CHATID = os.environ.get("BOTLOG_CHATID", None)
-
+try:
+    BOTLOG_CHATID = int(BOTLOG_CHATID)
+except BaseException:
+    pass
 # Github Credentials for updater and Gitupload.
 GIT_REPO_NAME = os.environ.get("GIT_REPO_NAME", None)
 GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
