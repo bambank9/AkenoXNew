@@ -181,6 +181,15 @@
       "description": "Key for screencap modules. get it from https://screenshotlayer.com/product.",
       "required": false
     },
+    "BOTLOG_CHATID": {
+      "description": "ChatID of the Log group. Set it to '0' if BOTLOG = False and/or if LOGSPAMMER = False. Checkout https://telegra.ph/OUBnew-06-11 to know how to get BOTLOG.",
+      "required": true,
+      "value": ""
+    },
+    "BOTLOG": {
+      "description": "Incase you want to turn off logging, put this to false",
+      "value": "False"
+    },
     "ALIVE_NAME": {
       "description": "Name to show in .alive message, Fill this with your name or else.",
       "required": true
