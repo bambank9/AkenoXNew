@@ -18,8 +18,7 @@ import os
 from dotenv import load_dotenv
 from telethon.tl.types import ChatBannedRights
 
-load_dotenv("config.env")
-
+ENV = bool(os.environ.get("ENV", False))
 
 class Var(object):
     APP_ID = int(os.environ.get("APP_ID", 6))
