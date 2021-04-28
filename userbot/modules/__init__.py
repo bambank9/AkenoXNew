@@ -17,7 +17,7 @@
 from telethon.tl.types import Channel
 
 from userbot import *
-from userbot import ALIVE_NAME, bot, telever
+from userbot import ALIVE_NAME, bot
 from userbot.akenoConfig import Config, Var
 
 # stats
