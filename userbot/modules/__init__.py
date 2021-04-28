@@ -1,24 +1,74 @@
-# Copyright (C) 2019 The Raphielscape Company LLC.
-#
-# Licensed under the Raphielscape Public License, Version 1.c (the "License");
-# you may not use this file except in compliance with the License.
-#
-""" Init file which loads all of the modules """
-from userbot import LOGS
+#    TeleBot - UserBot
+#    Copyright (C) 2020 TeleBot
+
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+from telethon.tl.types import Channel
+
+from userbot import *
+from userbot import ALIVE_NAME, bot, telever
+from userbot.akenoConfig import Config, Var
+
+# stats
+if Var.PRIVATE_GROUP_ID:
+    log = "Enabled"
+else:
+    log = "Disabled"
+
+if Config.TG_BOT_USER_NAME_BF_HER:
+    bots = "Enabled"
+else:
+    bots = "Disabled"
+
+if Var.LYDIA_API_KEY:
+    lyd = "Enabled"
+else:
+    lyd = "Disabled"
+
+if Config.SUDO_USERS:
+    sudo = "Disabled"
+else:
+    sudo = "Enabled"
+
+if Var.PMSECURITY.lower() == "off":
+    pm = "Disabled"
+else:
+    pm = "Enabled"
+
+TELEUSER = str(ALIVE_NAME) if ALIVE_NAME else "@TeleBotSupport"
+
+tele = f"AkenoXNew Version: {telever}\n"
+tele += f"Log Group: {log}\n"
+tele += f"Assistant Bot: {bots}\n"
+tele += f"Lydia: {lyd}\n"
+tele += f"Sudo: {sudo}\n"
+tele += f"PMSecurity: {pm}\n"
+tele += f"\nVisit @OreBaka for assistance.\n"
+telestats = f"{tele}"
+
+TELE_NAME = bot.me.first_name
+OWNER_ID = bot.me.id
+
+# count total number of groups
 
 
-def __list_all_modules():
-    from os.path import dirname, basename, isfile
-    import glob
-
-    mod_paths = glob.glob(dirname(__file__) + "/*.py")
-    return [
-        basename(f)[:-3]
-        for f in mod_paths
-        if isfile(f) and f.endswith(".py") and not f.endswith("__init__.py")
-    ]
-
-
-ALL_MODULES = sorted(__list_all_modules())
-LOGS.info("Modules to load: %s", str(ALL_MODULES))
-__all__ = ALL_MODULES + ["ALL_MODULES"]
+async def tele_grps(event):
+    a = []
+    async for dialog in event.client.iter_dialogs():
+        entity = dialog.entity
+        if isinstance(entity, Channel):
+            if entity.megagroup:
+                if entity.creator or entity.admin_rights:
+                    a.append(entity.id)
+    return len(a), a
