@@ -33,7 +33,6 @@ TELEPIC = (
 )
 PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
-myid = bot.uid
 MESAG = (
     str(CUSTOM_PMPERMIT)
     if CUSTOM_PMPERMIT
@@ -166,50 +165,6 @@ async def approve_p_m(event):
             await event.delete()
     else:
         await event.edit(APPROVED_PMs)
-
-
-@bot.on(events.NewMessage(incoming=True))
-async def on_new_private_message(event):
-    if event.sender_id == bot.uid:
-        return
-
-    if Var.PRIVATE_GROUP_ID is None:
-        return
-
-    if not event.is_private:
-        return
-
-    message_text = event.message.message
-    chat_id = event.sender_id
-
-    message_text.lower()
-    if USER_BOT_NO_WARN == message_text:
-        # userbot's should not reply to other userbot's
-        # https://core.telegram.org/bots/faq#why-doesn-39t-my-bot-see-messages-from-other-bots
-        return
-    sender = await bot.get_entity(chat_id)
-
-    if chat_id == bot.uid:
-
-        # don't log Saved Messages
-
-        return
-
-    if sender.bot:
-
-        # don't log bots
-
-        return
-
-    if sender.verified:
-
-        # don't log verified accounts
-
-        return
-
-    if not pmpermit_sql.is_approved(chat_id):
-        # pm permit
-        await do_pm_permit_action(chat_id, event)
 
 
 async def do_pm_permit_action(chat_id, event):
