@@ -35,8 +35,8 @@ async def help(event):
             string += "`" + str(i)
             string += "`\t|  "
         await event.edit("**🌪🌪🌪🌪🌪🌪**\n\n"
-                         f"**◑» Bᴏᴛ ᴏꜰ {DEFAULTUSER}**\n**◑» Mᴏᴅᴜʟᴇꜱ : {len(modules)}**\n\n"
-                         "**• Mᴀɪɴ Mᴇɴᴜ :**\n"
+                         f"**OWNER : {DEFAULTUSER}**\n**◑» Mᴏᴅᴜʟᴇꜱ : {len(modules)}**\n\n"
+                         "**MODULES:**\n"
                          f"╰►| {string} ◄─\n\n")
         await event.reply(f"\n**🔥 Contoh** : **Ketik** `.help afk` **Untuk Informasi Pengunaan.\nAtau Bisa Juga Ketik** `.helpme` **Untuk Main Menu Yang Lain-Nya.** 🔥")
         await asyncio.sleep(1000)
