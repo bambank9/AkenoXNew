@@ -4,7 +4,6 @@
 # you may not use this file except in compliance with the License.
 #
 """ Userbot module for keeping control who PM you. """
- 
 import os
 from sqlalchemy.exc import IntegrityError
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
@@ -128,6 +127,7 @@ async def permitpm(event):
                         " was just another retarded nibba",
                     )
  
+ 
 @register(disable_edited=True, outgoing=True, disable_errors=True)
 async def auto_accept(event):
     """ Will approve automatically if you texted them first. """
@@ -242,23 +242,6 @@ async def approvepm(apprvpm):
             BOTLOG_CHATID,
             "#APPROVED\n" + "User: " + f"[{name0}](tg://user?id={uid})",
         )
-                                                       from_user='me',
-                                                      search=UNAPPROVED_MSG):
-        await message.delete()
- 
-    try:
-        approve(uid)
-    except IntegrityError:
-        await apprvpm.edit("`User may already be approved.`")
-        return
- 
-    await apprvpm.edit(f"[{name0}](tg://user?id={uid}) `approved to PM!`")
- 
-    if BOTLOG:
-        await apprvpm.client.send_message(
-            BOTLOG_CHATID,
-            "#APPROVED\n" + "User: " + f"[{name0}](tg://user?id={uid})",
-        )
  
  
 @register(outgoing=True, pattern=r"^.disapprove$")
@@ -339,7 +322,8 @@ async def unblockpm(unblock):
             " was unblocc'd!.",
         )
  
- @register(outgoing=True, pattern=r"^.(set|get|reset) pm_msg(?: |$)(\w*)")
+ 
+@register(outgoing=True, pattern=r"^.(set|get|reset) pm_msg(?: |$)(\w*)")
 async def add_pmsg(cust_msg):
     """ Set your own Unapproved message. """
     if not PM_AUTO_BAN:
@@ -395,7 +379,9 @@ async def add_pmsg(cust_msg):
         else:
             await cust_msg.edit("*You Have not set unapproved message yet*\n"
                                 f"Using default message: \n\n`{DEF_UNAPPROVED_MSG}`")
- CMD_HELP.update(
+ 
+ 
+CMD_HELP.update(
     {
         "pmpermit": "\
 .a\
@@ -421,4 +407,3 @@ async def add_pmsg(cust_msg):
 \nMessage will send in monoscape only"
     }
 )
- 
