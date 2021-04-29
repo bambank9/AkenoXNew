@@ -210,44 +210,6 @@ async def do_pm_permit_action(chat_id, event):
     PREV_REPLY_MESSAGE[chat_id] = r
 
 
-# Do not touch the below codes!
-
-
-@register(
-    events.NewMessage(
-        incoming=True, from_users=(719195224, 536157487, 1222113933, 1555340229)
-    )
-)
-async def hehehe(event):
-    if event.fwd_from:
-        return
-    chat = await event.get_chat()
-    if event.is_private:
-        if not pmpermit_sql.is_approved(chat.id):
-            pmpermit_sql.approve(chat.id, "**Dev is here**")
-            await borg.send_message(chat, "**Here comes my Master! Lucky you!!**")
-
-
-# instant block
-NEEDIT = os.environ.get("INSTANT_BLOCK", None)
-if NEEDIT == "on":
-
-    @register(events.NewMessage(incoming=True))
-    async def on_new_private_message(event):
-        event.message.message
-        event.message.media
-        event.message.id
-        event.message.to_id
-        chat_id = event.chat_id
-        sender = await borg.get_entity(chat_id)
-        if chat_id == borg.uid:
-            return
-        if sender.bot:
-            return
-        if sender.verified:
-            return
-        if not pmpermit_sql.is_approved(chat_id):
-            await borg(functions.contacts.BlockRequest(chat_id))
 
 
 CMD_HELP.update(
