@@ -1,5 +1,5 @@
 from sqlalchemy import Column, String
-from telebot.plugins.sql_helper import SESSION, BASE
+from uerbot.modules.sql_helper import SESSION, BASE
 
 
 class PMPermit(BASE):
