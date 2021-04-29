@@ -36,14 +36,6 @@ MESAG = (
     if CUSTOM_PMPERMIT
     else "`AkenoXNew PM security! Please wait for me to approve you. 😊"
 )
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "TeleBot User"
-USER_BOT_WARN_ZERO = "`I had warned you not to spam. Now you have been blocked and reported until further notice.`\n\n**GoodBye!** "
-USER_BOT_NO_WARN = (
-    "**PM Security ~ TeleBot**\n\nNice to see you here, but  "
-    "[{}](tg://user?id={}) is currently unavailable.\nThis is an automated message.\n\n"
-    "{}\n\n**You have** `{}/{}` **warnings...**"
-    "\n\n   ~ Thank You."
-)
 # =================================================================
  
  
