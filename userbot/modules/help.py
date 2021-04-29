@@ -4,32 +4,40 @@
 # you may not use this file except in compliance with the License.
 #
 """ Userbot help command """
-from userbot import CMD_HELP
+
+import asyncio
+from userbot import ALIVE_NAME, CMD_HELP
 from userbot.events import register
+from platform import uname
+
+modules = CMD_HELP
+
+# Ported by KENZO (Lynx-Userbot)
+# ================= CONSTANT =================
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
+# ============================================
+
+
 @register(outgoing=True, pattern="^.help(?: |$)(.*)")
 async def help(event):
     """ For .help command,"""
     args = event.pattern_match.group(1).lower()
-    # Prevent Channel Bug to get any information and commad from all modules
-    if event.is_channel and not event.is_group:
-        await event.edit("`Help Commad isn't permitted on channels`")
-        return
     if args:
         if args in CMD_HELP:
             await event.edit(str(CMD_HELP[args]))
         else:
-            await event.edit("Yang Bener Tulis Modulnya.")
+            await event.edit("**Tulis Modulenya Yang Bener Asu... **")
+            await asyncio.sleep(200)
+            await event.delete()
     else:
-        string1 = "Harap tentukan modul mana yang Anda ingin bantuannya !!\nUsage: .help <nama modul>\n\n"
-        string = "🌪 "
-        string3 = "Daftar untuk semua perintah yang tersedia di bawah ini: "
-        string2 = "-------------------------------------------------------------"
+        string = ""
         for i in CMD_HELP:
             string += "`" + str(i)
-            string += "`  🌪 🌪  "
-            string += "`  🌪  "
-        await event.edit(
-            f"{string1}" f"{string3}" f"{string2}\n" f"{string}" f"{string2}"
-        )
-        await asyncio.sleep(120)
+            string += "`\t|  "
+        await event.edit("**🌪🌪🌪🌪🌪🌪**\n\n"
+                         f"**◑» Bᴏᴛ ᴏꜰ {DEFAULTUSER}**\n**◑» Mᴏᴅᴜʟᴇꜱ : {len(modules)}**\n\n"
+                         "**• Mᴀɪɴ Mᴇɴᴜ :**\n"
+                         f"╰►| {string} ◄─\n\n")
+        await event.reply(f"\n**🔥 Contoh** : **Ketik** `.help afk` **Untuk Informasi Pengunaan.\nAtau Bisa Juga Ketik** `.helpme` **Untuk Main Menu Yang Lain-Nya.** 🔥")
+        await asyncio.sleep(1000)
         await event.delete()
