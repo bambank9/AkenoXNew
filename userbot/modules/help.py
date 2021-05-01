@@ -6,21 +6,17 @@
 """ Userbot help command """
 
 import asyncio
-from userbot import ALIVE_NAME, CMD_HELP
+from userbot import ALIVE_NAME, CMD_HELP, USERS
 from userbot.events import register
 from platform import uname
 
 modules = CMD_HELP
 
-# Ported by KENZO (Lynx-Userbot)
-# ================= CONSTANT =================
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
-# ============================================
-
 
 @register(outgoing=True, pattern="^.help(?: |$)(.*)")
 async def help(event):
     """ For .help command,"""
+    global USERS
     args = event.pattern_match.group(1).lower()
     if args:
         if args in CMD_HELP:
@@ -35,7 +31,7 @@ async def help(event):
             string += "`" + str(i)
             string += "`\t🌪  "
         await event.edit("**🌪 Akeno 🌪**\n\n"
-                         f"**OWNER : {DEFAULTUSER}**\n**MODULES : {len(modules)}**\n\n"
+                         f"**OWNER : [{user.first_name}](tg://user?id={user.id})**\n**MODULES : {len(modules)}**\n\n"
                          "**MODULES:**\n"
                          f"╰►🌪 {string} ◄─\n\n")
         await event.reply(f"\n**Contoh** : **Ketik** `.help comli` **Untuk Informasi Pengunaan.\nAtau Bisa Juga Ketik** `.helpme` **Untuk Main Menu Yang Lain-Nya.**")
