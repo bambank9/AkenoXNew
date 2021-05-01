@@ -44,12 +44,12 @@
       "description": "Your Heroku API key, get it from 'https://dashboard.heroku.com/account'",
       "value": ""
     },
-    "TG_BOT_TOKEN_BF_HER": {
+    "BOT_TOKEN": {
       "description": "Needed for inline buttons maker. Make a bot at @BotFather and get the token of your bot.",
       "value": "",
       "required": true
     },
-    "TG_BOT_USER_NAME_BF_HER": {
+    "BOT_USERNAME": {
       "description": "Needed for inline buttons maker. Make a bot at [BotFather](http://telegram.dog/BotFather) and get the username of your bot. Needed for .help to work.",
       "value": "",
       "required": true
