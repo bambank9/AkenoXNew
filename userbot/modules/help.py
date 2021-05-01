@@ -6,7 +6,7 @@
 """ Userbot help command """
 
 import asyncio
-from userbot import ALIVE_NAME, CMD_HELP, USERS
+from userbot import ALIVE_NAME, CMD_HELP, USERS, bot
 from userbot.events import register
 from platform import uname
 
@@ -17,6 +17,8 @@ modules = CMD_HELP
 async def help(event):
     """ For .help command,"""
     global USERS
+    user = await bot.get_me()
+    user.name = user.first_name
     args = event.pattern_match.group(1).lower()
     if args:
         if args in CMD_HELP:
