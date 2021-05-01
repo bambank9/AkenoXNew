@@ -33,8 +33,8 @@ async def help(event):
         string = ""
         for i in CMD_HELP:
             string += "`" + str(i)
-            string += "`\t|  "
-        await event.edit("**🌪🌪🌪🌪🌪🌪**\n\n"
+            string += "`\t🌪  "
+        await event.edit("**🌪 Akeno 🌪**\n\n"
                          f"**OWNER : {DEFAULTUSER}**\n**MODULES : {len(modules)}**\n\n"
                          "**MODULES:**\n"
                          f"╰►🌪 {string} ◄─\n\n")
