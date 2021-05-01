@@ -278,7 +278,7 @@ async def amireallyalive(alive):
         f"➥  `Python Version         :v{python_version()} `\n"
         f"➥  `Load modules           :`{len(modules)} \n"
         f"➥  `BotUpTime              :`{uptime}\n"
-        f"➥  Repo                                            :[Akeno](https://github.com/rizgustiadi/AkenoXNew)\n\n"
+        f"➥  Repo                                             :[Akeno](https://github.com/rizgustiadi/AkenoXNew)\n\n"
         f"              Running On 🔥 __{UPSTREAM_REPO_BRANCH}__ 🔥\n"
     )
     await bot.send_file(alive.chat_id, logo, caption=output)
